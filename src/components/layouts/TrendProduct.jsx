@@ -1,5 +1,7 @@
 import React from 'react'
 import Container from '../Container'
+import ProductforTrendy from '../ProductforTrendy'
+import product from '../../assets/product.png'
 
 const TrendProduct = () => {
     return (
@@ -16,6 +18,19 @@ const TrendProduct = () => {
                             <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>NEWARRIVALS</button>
                             <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>BEST SELLER </button>
                             <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>TOP RATING</button>
+                        </div>
+                    </div>
+                    <div className="mt-[41px]">
+                        <div className="flex justify-between">
+                            <div className="">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Calvin Shorts'}
+                                    productPrice={'$62'}
+                                    offerPrice={'$99'}
+                                />
+                            </div>
                         </div>
                     </div>
                 </Container>
