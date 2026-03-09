@@ -21,12 +21,77 @@ const TrendProduct = () => {
                         </div>
                     </div>
                     <div className="mt-[41px]">
-                        <div className="flex justify-between">
-                            <div className="">
+                        <div className="flex gap-x-7.5 justify-between">
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Cropped Faux Leather Jacket'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Calvin Shorts'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Kirby T-Shirt'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Cableknit Shawl'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                        </div>
+                        <div className="flex gap-x-7.5 mt-12.5 justify-between">
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Colorful Jacket'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Shirt In Botanical Cheetah Print'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Cotton Jersey T-Shirt'}
+                                    productPrice={'$62'}
+                                    // offerPrice={'$99'}
+                                />
+                            </div>
+                            <div className="w-1/4">
+                                <ProductforTrendy className={''}
+                                    productImg={product}
+                                    productType={'Dresses'}
+                                    productTitle={'Zessi Dresses'}
                                     productPrice={'$62'}
                                     offerPrice={'$99'}
                                 />
