@@ -5,3 +5,38 @@
     --font-Jost: "Jost", sans-serif; 
     /* --shadow-newMade: 0 28px 30px rgba(99, 122, 166, 0.05); */
 }
+
+.banner-dots {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-dots .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: #767676 !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    border-radius: 50%;
+}
+
+.banner-dots .swiper-pagination-bullet-active {
+    width: 30px !important;
+    height: 30px !important;
+    background: transparent !important;
+    border: 1.5px solid #222 !important;
+    position: relative !important;
+}
+
+.banner-dots .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; 
+    height: 8px;
+    background: #222;
+    border-radius: 50%;
+}
