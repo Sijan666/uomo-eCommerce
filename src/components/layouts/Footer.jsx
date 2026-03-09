@@ -30,7 +30,7 @@ const Footer = () => {
       <Container className="py-[100px]">
         <div className="flex">
 
-          {/* Column 1 */}
+         
           <div className="w-[282px] h-[255.26px]">
             <div className="mb-8">
               <img
@@ -57,10 +57,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Spacer */}
+         
           <div className="w-[79px]"></div>
 
-          {/* Columns 2, 3, 4 */}
+        
           <div className="grid grid-cols-3 w-[586px] gap-x-6">
 
             {footerColumns.map((col, i) => (
@@ -81,10 +81,10 @@ const Footer = () => {
 
           </div>
 
-          {/* Spacer */}
+      
           <div className="w-[133px]"></div>
 
-          {/* Subscribe Column */}
+         
           <div className="col-span-1">
             <h2 className="font-['Jost',sans-serif] font-medium text-[#222222] text-[18px] mb-4">SUBSCRIBE</h2>
             <p className="text-[#222] text-[14px] leading-6 mt-[27px] mb-4">
@@ -117,7 +117,6 @@ const Footer = () => {
 
         <div className="w-full h-[1px] mt-[88px] bg-[#CFCDCD]"></div>
 
-        {/* Footer bottom */}
         <div className="flex items-center py-6 mt-[34px]">
           <p className="font-['Jost',sans-serif] text-[#222] text-[14px] leading-6 mr-[897px] whitespace-nowrap">
             ©2020 Uomo
@@ -145,7 +144,7 @@ const Footer = () => {
         </div>
       </Container>
 
-      {/* Bottom-right arrow */}
+     
       <div className="w-[45px] h-[45px] absolute bottom-0 right-0 bg-white p-[16px] flex items-center justify-center">
         <img src="./src/assets/arrow.png" alt="" />
       </div>
