@@ -15,10 +15,9 @@ const slides = [
 
 const Banner = () => {
     return (
-        <div className="relative w-full">
-
+        <section className="relative w-full" id='banner'>
             {/* Left Social Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[30px] lg:w-[40px] items-center justify-center gap-4 lg:gap-6 z-10">
+            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[2%] items-center justify-center gap-4 lg:gap-6 z-10">
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaFacebookF size={14} /></a>
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaTwitter size={14} /></a>
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaInstagram size={14} /></a>
@@ -30,16 +29,15 @@ const Banner = () => {
                     </span>
                 </div>
             </div>
-
             {/* Right Scroll Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute right-0 top-0 h-full w-[30px] lg:w-[40px] items-center justify-end pb-8 gap-3 z-10">
+            <div className="hidden md:flex md:flex-col absolute right-0 top-0 h-full  w-[2%] items-center justify-end pb-8 gap-3 z-10">
                 <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-black"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     SCROLL
                 </span>
-                <div className="w-[1px] h-10 bg-black"></div>
+                <div className="w-px h-10 bg-black"></div>
             </div>
-
+            {/* slider */}
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true, el: '.banner-dots' }}
@@ -49,33 +47,33 @@ const Banner = () => {
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id}>
                         <div
-                            className="w-full pt-[150px] pb-[200px] md:pt-[220px] md:pb-[260px] lg:pt-[288px] lg:pb-[317px] bg-cover bg-center bg-no-repeat"
+                            className="w-[96%] mx-auto pt-[150px] pb-[200px] md:pt-[220px] md:pb-[260px] lg:pt-72 lg:pb-[317px] bg-cover bg-center bg-no-repeat"
                             style={{ backgroundImage: `url(${slide.bg})` }}
                         >
                             <Container>
                                 <div>
                                     <div className="flex items-center gap-2 mb-3">
-                                    <div className="w-6 md:w-8 h-[2px] bg-[#FF6F61]"></div>
-                                    <h2 className='text-[11px] md:text-[13px] lg:text-[14px] text-[#FF6F61] font-Jost font-medium leading-[24px]'>NEW TREND</h2>
-                                </div>
-                                <h1 className='text-[36px] sm:text-[48px] md:text-[56px] lg:text-[70px] text-[#222222] font-Jost leading-tight lg:leading-[80px]'>
-                                    SUMMER SALE STYLISH <br />
-                                    <span className='font-bold'>WOMENS</span>
-                                </h1>
+                                        <div className="w-6 md:w-8 h-0.5 bg-[#C32929]"></div>
+                                        <h2 className='text-[11px] md:text-[13px] lg:text-[14px] text-[#C32929] font-Jost font-medium leading-6'>NEW TREND</h2>
+                                    </div>
+                                    <h1 className='text-[36px] sm:text-[48px] md:text-[56px] lg:text-[70px] text-[#222222] font-Jost leading-tight lg:leading-20'>
+                                        SUMMER SALE STYLISH <br />
+                                        <span className='font-bold'>WOMENS</span>
+                                    </h1>
                                 </div>
                             </Container>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-
+            {/* dots */}
             <div className="absolute bottom-[58px] left-0 right-0 z-10">
                 <Container>
                     <div className="banner-dots" />
                 </Container>
             </div>
 
-        </div>
+        </section>
     )
 }
 
