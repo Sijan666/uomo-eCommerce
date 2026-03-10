@@ -15,9 +15,9 @@ const slides = [
 
 const Banner = () => {
     return (
-        <section className="relative w-full" id='banner'>
+        <section className="relative w-full overflow-hidden" id='banner'>
             {/* Left Social Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[4%] items-center justify-center gap-4 lg:gap-6 z-10">
+            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[3.125%] items-center justify-center gap-4 lg:gap-6 z-10">
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaFacebookF size={14} /></a>
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaTwitter size={14} /></a>
                 <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaInstagram size={14} /></a>
@@ -30,7 +30,7 @@ const Banner = () => {
                 </div>
             </div>
             {/* Right Scroll Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute right-0 top-0 h-full w-[4%] items-center justify-end pb-8 gap-3 z-10">
+            <div className="hidden md:flex md:flex-col absolute right-0 top-0 h-full w-[3.125%] items-center justify-end pb-8 gap-3 z-10">
                 <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-black"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     SCROLL
@@ -47,8 +47,8 @@ const Banner = () => {
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id}>
                         <div
-                            className="w-[92%] mx-auto pt-[150px] pb-[200px] md:pt-[220px] md:pb-[260px] lg:pt-72 lg:pb-[317px] bg-cover bg-center bg-no-repeat"
-                            style={{ backgroundImage: `url(${slide.bg})` }}
+                            className=" w-[93.75%] mx-auto pt-[150px] pb-[200px] md:pt-[220px] md:pb-[260px] lg:pt-72 lg:pb-[317px]  bg-cover bg-center bg-no-repeat"
+                            style={{ backgroundImage: `url(${slide.bg})`}}
                         >
                             <Container>
                                 <div>
