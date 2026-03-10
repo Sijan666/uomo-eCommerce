@@ -6,7 +6,7 @@ import Button from "../Button";
 const ContactUs = () => {
   return (
     <>
-      <div className="max-w-[930px] mx-auto pt-[50px] md:pt-[70px] lg:pt-[96px] mb-[32px] px-4 lg:px-0">
+      <div className="max-w-[930px] mx-auto pt-[50px] md:pt-[70px] lg:pt-24 mb-8 px-4 lg:px-0">
         <h1 className="font-Jost font-bold text-[22px] md:text-[28px] lg:text-[35px] text-[#222222]">
           Contact Us
         </h1>
@@ -17,7 +17,7 @@ const ContactUs = () => {
       </div>
 
       <div className="max-w-[930px] mx-auto mt-[50px] mb-[100px] px-4 lg:px-0">
-        <div className="flex flex-col items-center md:items-start md:flex-row gap-[40px] md:gap-[100px] lg:gap-[198px]">
+        <div className="flex flex-col items-center md:items-start md:flex-row gap-10 md:gap-25 lg:gap-[198px]">
           <div className="text-center md:text-left">
             <h1 className="font-Jost font-medium text-[20px] md:text-[22px] lg:text-[26px] text-[#222222]">
               Store in London
