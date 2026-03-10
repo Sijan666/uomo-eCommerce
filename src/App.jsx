@@ -4,6 +4,7 @@ import { Routes , Route } from 'react-router-dom'
 import RootLayouts from './components/layouts/RootLayouts'
 // import About from './components/pages/About'
 import Error from './components/pages/Error'
+import Blog from './components/pages/Blog'
 
 
 function App () {
@@ -13,6 +14,7 @@ function App () {
         <Route path="/" element={<RootLayouts />}>
           <Route index element={<Home/>} />
           {/* <Route path="/about" element={<About/>} /> */}
+          <Route path="/blog" element={<Blog/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
