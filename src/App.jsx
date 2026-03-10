@@ -1,5 +1,4 @@
 
-import Home from './components/pages/Home'
 import { Routes , Route } from 'react-router-dom'
 import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
