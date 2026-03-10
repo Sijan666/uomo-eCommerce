@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import Image from './Image'
 import { IoMdHeart } from 'react-icons/io'
 
-const ProductforTrendy = ({className , productImg , productType , productTitle , productPrice , offerPrice}) => {
+const ProductforTrendy = ({className , productImg , imgClassName, productType , productTitle , productPrice , offerPrice}) => {
     
     const [isLiked, setIsLiked] = useState(false);
 
     return (
         <>
         <div className={`${className}`}>
-            <Image imgSrc={productImg} className={'w-full'}/>
+            <Image imgSrc={productImg} className={`w-full ${imgClassName}`}/>
             <div className="mt-3.5">
                 <div className="flex justify-between items-center">
                     <p className='text-[14px] font-Jost text-[#767676]'>{productType}</p>
