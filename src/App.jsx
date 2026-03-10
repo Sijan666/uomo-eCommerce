@@ -6,6 +6,7 @@ import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
 import Blog from './components/pages/Blog'
 import Shop from './components/pages/Shop'
+import FAQ from './components/pages/FAQ'
 
 
 function App () {
@@ -17,6 +18,7 @@ function App () {
           {/* <Route path="/about" element={<About/>} /> */}
           <Route path="/blog" element={<Blog/>} />
           <Route path="/shop" element={<Shop/>} />
+          <Route path="/faq" element={<FAQ/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
