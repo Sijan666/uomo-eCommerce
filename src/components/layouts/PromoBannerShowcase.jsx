@@ -70,7 +70,7 @@ export default function PromoBannerShowcase() {
 
               {/* Text */}
               <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 md:p-8 lg:p-12 z-10">
-               <p className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[18px] font-medium tracking-widest uppercase mb-1 sm:mb-2 font-Jost text-black truncate">
+               <p className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[18px] font-medium uppercase mb-1 sm:mb-2 ">
                   Starting at $39
                 </p>
 
