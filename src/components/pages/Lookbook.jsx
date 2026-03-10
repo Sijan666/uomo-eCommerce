@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../Container";
-import productImage from "/src/assets/productImage.png";
+
 
 const Lookbook = () => {
   return (
@@ -16,15 +16,15 @@ const Lookbook = () => {
                 <p className="text-[18px] text-red-100 font-Jost">
                   Starting at $19
                 </p>
-                <h2 className="text-[26px] text-white font-Jost">
+                <h2 className="text-[26px] mt-[8px] text-white font-Jost">
                   Women's T-Shirts
                 </h2>
               </div>
 
               <img
-                src={productImage}
+                src="/src/assets/Lookbook/card1.png"
                 alt=""
-                className="absolute top-[1px] right-[10px] w-[433px]  mix-blend-multiply border-[1px] border-black "
+                className="absolute  right-[10px] mix-blend-multiply border-[0.5px] border-black-100 "
               />
             </div>
           </div>
@@ -40,9 +40,9 @@ const Lookbook = () => {
             </div>
 
             <img
-              src={productImage}
+              src="/src/assets/Lookbook/card2.png"
               alt=""
-              className="absolute -top-[64px] right-[20px] w-[350px] h-[526px] "
+              className="absolute  right-[20px] "
             />
           </div>
         </div>
@@ -60,9 +60,9 @@ const Lookbook = () => {
             </div>
 
             <img
-              src={productImage}
+              src="/src/assets/Lookbook/card3.png"
               alt=""
-              className="absolute  w-[903px] h-[1129px] "
+              className="absolute"
             />
           </div>
         </div>
@@ -80,9 +80,9 @@ const Lookbook = () => {
             </div>
 
             <img
-              src={productImage}
+              src="/src/assets/Lookbook/card4.png"
               alt=""
-              className="absolute left-[165px] w-[618px] h-[837px]"
+              className="absolute left-[165px] "
             />
           </div>
         </div>
@@ -100,9 +100,9 @@ const Lookbook = () => {
             </div>
 
             <img
-              src={productImage}
+              src="/src/assets/Lookbook/card5.png"
               alt=""
-              className="absolute -top-[64px] left-[304px] w-[344px] h-[605px]"
+              className="absolute left-[304px] "
             />
           </div>
 
@@ -117,20 +117,22 @@ const Lookbook = () => {
             </div>
 
             <img
-              src={productImage}
+              src="/src/assets/Lookbook/card6.png"
               alt=""
-              className="absolute -top-[103px] left-[233px] w-[448px] h-[605px]"
+              className="absolute  left-[233px] "
             />
           </div>
         </div>
       </div>
-      <div className="group inline-flex flex-col items-center mt-[50px] mb-[101px] cursor-pointer">
+      
+        <div className="mx-auto w-full group inline-flex flex-col items-center mt-[40px] mb-[101px] cursor-pointer">
         <a className="text-[#222222] font-medium text-[14px] leading-10">
           SHOW MORE
         </a>
 
-        <div className="w-full h-[3px] bg-[#222222] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+        <div className="w-[75px] h-[3px] bg-[#222222] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
       </div>
+      
     </Container>
   );
 };
