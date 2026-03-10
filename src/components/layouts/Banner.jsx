@@ -17,7 +17,7 @@ const Banner = () => {
     return (
         <section className="relative w-full overflow-hidden" id='banner'>
             {/* Left Social Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[4%] items-center justify-center gap-4 lg:gap-6 z-10">
+            <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[3.125%] items-center justify-center gap-y-4 lg:gap-y-6 z-10">
                 <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaFacebookF size={14} /></button>
                 <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaTwitter size={14} /></button>
                 <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaInstagram size={14} /></button>
@@ -30,7 +30,7 @@ const Banner = () => {
                 </div>
             </div>
             {/* Right Scroll Sidebar */}
-            <div className="hidden md:flex md:flex-col absolute right-0 top-0 h-full w-[3.125%] items-center justify-end pb-8 gap-3 z-10">
+            <div className="hidden md:flex md:flex-col absolute right-0 top-10 h-full w-[3.125%] items-center justify-end pb-8 gap-3 z-10">
                 <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-black"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     SCROLL
