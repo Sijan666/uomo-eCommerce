@@ -43,6 +43,7 @@ const Shop = () => (
                             <div className="mt-10">
                                 <h3 className='text-[26px] font-Jost text-[#222222]'>Lightweight Puffer Jacket With a Hood</h3>
                                 <h4 className='pt-[7px] text-[#222222] font-medium font-Jost text-[22px]'>$449</h4>
+                                <p className='pt-[25px] font-Jost text-[14px] text-[#222222]'>Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.</p>
                             </div>
                         </div>
                     </div>
