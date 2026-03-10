@@ -5,6 +5,7 @@ import RootLayouts from './components/layouts/RootLayouts'
 // import About from './components/pages/About'
 import Error from './components/pages/Error'
 import Blog from './components/pages/Blog'
+import Shop from './components/pages/Shop'
 
 
 function App () {
@@ -15,6 +16,7 @@ function App () {
           <Route index element={<Home/>} />
           {/* <Route path="/about" element={<About/>} /> */}
           <Route path="/blog" element={<Blog/>} />
+          <Route path="/shop" element={<Shop/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
