@@ -31,11 +31,11 @@ const Banner = () => {
             </div>
             {/* Right Scroll Sidebar */}
             <div className="hidden md:flex md:flex-col absolute right-0 top-10 h-full w-[3.125%] items-center justify-end pb-8 gap-3 z-10">
-                <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-black"
+                <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-[#222222]"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     SCROLL
                 </span>
-                <div className="w-px h-10 bg-black"></div>
+                <div className="w-0.5 h-7.5 bg-black"></div>
             </div>
             {/* slider */}
             <Swiper
