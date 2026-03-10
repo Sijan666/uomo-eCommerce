@@ -2,11 +2,11 @@
 import Home from './components/pages/Home'
 import { Routes , Route } from 'react-router-dom'
 import RootLayouts from './components/layouts/RootLayouts'
-// import About from './components/pages/About'
 import Error from './components/pages/Error'
 import Blog from './components/pages/Blog'
 import Shop from './components/pages/Shop'
 import ContactUs from './components/pages/ContactUs'
+import About from './components/pages/About'
 
 
 function App () {
@@ -15,10 +15,10 @@ function App () {
       <Routes>
         <Route path="/" element={<RootLayouts />}>
           <Route index element={<Home/>} />
-          {/* <Route path="/about" element={<About/>} /> */}
           <Route path="/blog" element={<Blog/>} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/about" element={<About/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
