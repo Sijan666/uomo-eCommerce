@@ -2,7 +2,7 @@
 import Ads from "../layouts/Ads"
 import Banner from "../layouts/Banner"
 import FooterTop from "../layouts/FooterTop"
-import SmallBanner from "../layouts/SmallBanner"
+import PromoBannerShowcase from "../layouts/PromoBannerShowcase"
 import Spring from "../layouts/Spring"
 import TrendProduct from "../layouts/TrendProduct"
 
@@ -13,7 +13,7 @@ const Home = () => {
         <Banner/>
         <TrendProduct/>
         <Spring/>
-        <SmallBanner/>
+        <PromoBannerShowcase/>
         <Ads/>
         <FooterTop/>
         </>
