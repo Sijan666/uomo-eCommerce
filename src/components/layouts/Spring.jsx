@@ -2,6 +2,7 @@ import React from 'react'
 import Image from '../Image'
 import springImage from '../../assets/springImage.png'
 import Container from '../Container'
+import CountdownTimer from '../../npm/CountdownTimer'
 
 const Spring = () => {
     return (
@@ -15,6 +16,9 @@ const Spring = () => {
                             <h3 className='text-[#000000] font-Jost text-[30px] md:text-[70px] uppercase '><span className='font-bold'>Spring</span> Collection</h3>
                             <div className="btn mt-[11px]">
                                 <button className='font-Jost text-[14px] font-medium text-[#222222] beforeAfter '>SHOP NOW</button>
+                            </div>
+                            <div className="countdown mt-15 mb-6 md:mb-0 md:mt-[119.69px]">
+                                <CountdownTimer/>
                             </div>
                         </div>
                         <div className="right">
