@@ -92,11 +92,11 @@ const LimitedEdition = () => {
           </Swiper>
 
           {/* Navigation Buttons (design unchanged) */}
-          <button className="limited-prev absolute top-1/2 -translate-y-1/2 left-1 md:left-2 lg:-left-10 z-10">
+          <button className="limited-prev absolute top-1/2 -translate-y-1/2 left-1 md:left-2 lg:-left-10 z-10 cursor-pointer">
             <IoIosArrowBack size={25} className="text-[#767676]"/>
           </button>
 
-          <button className="limited-next absolute top-1/2 -translate-y-1/2 right-1 md:right-2 lg:-right-10 z-10">
+          <button className="limited-next absolute top-1/2 -translate-y-1/2 right-1 md:right-2 lg:-right-10 z-10 cursor-pointer">
             <IoIosArrowForward size={25} className="text-[#767676]" />
           </button>
 

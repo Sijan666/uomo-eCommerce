@@ -7,7 +7,7 @@ export default function PromoBannerShowcase() {
   return (
     <section>
       <Container>
-        <div className="flex flex-col items-center justify-center mt-[40px] sm:mt-[70px] lg:mt-[100px] mb-[10px] sm:mb-[20px] lg:mb-[44px]">
+        <div className="flex flex-col items-center justify-center mt-10 sm:mt-[70px] lg:mt-25 mb-2.5 sm:mb-5 lg:mb-11">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-7.5 w-full">
 
@@ -70,7 +70,7 @@ export default function PromoBannerShowcase() {
 
               {/* Text */}
               <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 md:p-8 lg:p-12 z-10">
-               <p className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[18px] font-medium uppercase mb-1 sm:mb-2 ">
+              <p className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[18px] font-medium uppercase mb-1 sm:mb-2 ">
                   Starting at $39
                 </p>
 
