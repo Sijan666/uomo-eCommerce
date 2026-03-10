@@ -13,7 +13,7 @@ const Blog = () => {
     <div>
         <Container>
             {/* top */}
-           <div className='ml-0 md:ml-[120px] lg:ml-[240px] mt-[50px] md:mt-[70px] lg:mt-[90px] mb-[43px]'>
+           <div className='ml-0 lg:ml-[240px] mt-[50px] md:mt-[70px] lg:mt-[90px] mb-[43px]'>
              <h1 className='font-bold font-Jost text-[22px] md:text-[28px] lg:text-[35px] text-[#222222] uppercase'>5 Tips to Increase Your Online Sales</h1>
              <div className='flex gap-[15px] md:gap-[25px] items-center mt-3 text-[12px] md:text-[14px] font-Jost text-[#767676] leading-[24px]'>
                 <h3>BY ADMIN</h3>
@@ -22,7 +22,7 @@ const Blog = () => {
              </div>
            </div>
            <Image imgSrc={blogImg}/>
-           <div className='ml-0 md:ml-[120px] lg:ml-[240px] max-w-full lg:max-w-[930px] mt-10 mb-[43px] px-4 md:px-0'>
+           <div className='ml-0 lg:ml-[240px] max-w-full lg:max-w-[930px] mt-10 mb-[43px] px-4 md:px-0'>
             <p className='text-[13px] md:text-[14px] text-[#222222] font-Jost leading-[30px] mb-[40px] md:mb-[60px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sapien dignissim a elementum. Sociis metus, hendrerit mauris id in. Quis sit sit ultrices tincidunt euismod luctus diam. Turpis sodales orci etiam phasellus lacus id leo. Amet turpis nunc, nulla massa est viverra interdum. Praesent auctor nulla morbi non posuere mattis. Arcu eu id maecenas cras. Eget fames tincidunt leo, sed vitae, pretium interdum. Non massa, imperdiet nunc sit sapien. Tempor lectus ornare quis mi vel. Nibh euismod donec elit posuere lobortis consequat faucibus aliquam metus. Ornare consequat, vulputate sit maecenas mauris urna sed fringilla. Urna fermentum iaculis pharetra, maecenas dui nullam nullam rhoncus. Facilisis quis vulputate sem gravida lacus, justo placerat.</p>
             <h2 className='text-[15px] md:text-[16px] font-medium text-[#222222] font-Jost leading-[30px]'>Sed do eiusmod tempor incididunt ut labore</h2>
             <p className='text-[13px] md:text-[14px] text-[#222222] font-Jost leading-[30px] mt-10 mb-[30px]'>Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons. Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding grass you'll air sea it, open waters subdue, hath. Brought second Made. Be. Under male male, firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply him life give they're great.</p>
@@ -48,12 +48,14 @@ const Blog = () => {
             </div>
             <p className='text-[13px] md:text-[14px] text-[#222222] font-Jost leading-[30px] mt-[34px]'>She'd years darkness days. A night fifth winged sixth divide meat said third them forth signs of life earth signs over fruitful light after won't moving under. Thing yielding upon seed. Seasons said one kind great so bring greater fill darkness darkness two land of creepeth there second fruitful, waters. Make don't void years Gathering gathering divide fill.</p>
         </div>
-        <div className='flex flex-col md:flex-row gap-[20px] md:gap-[31px] items-center justify-center px-4 md:px-0'>
+        {/* Images */}
+    
+        <div className='flex gap-[20px] md:gap-[31px] items-center justify-center px-4 md:px-0 max-w-full overflow-hidden'>
             <Image imgSrc={img01}/>
             <Image imgSrc={img02}/>
         </div>
         {/* Bottom */}
-        <div className='ml-0 md:ml-[120px] lg:ml-[240px] max-w-full lg:max-w-[930px] mt-[50px] mb-[110px] px-4 md:px-0'>
+        <div className='ml-0 lg:ml-[240px] max-w-full lg:max-w-[930px] mt-[50px] mb-[110px] px-4 md:px-0'>
             <p className='text-[13px] md:text-[14px] text-[#222222] font-Jost leading-[30px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sapien dignissim a elementum. Sociis metus, hendrerit mauris id in. Quis sit sit ultrices tincidunt euismod luctus diam. Turpis sodales orci etiam phasellus lacus id leo. Amet turpis nunc, nulla massa est viverra interdum. Praesent auctor nulla morbi non posuere mattis. Arcu eu id maecenas cras. Eget fames tincidunt leo, sed vitae, pretium interdum. Non massa, imperdiet nunc sit sapien. Tempor lectus ornare quis mi vel. Nibh euismod donec elit posuere lobortis consequat faucibus aliquam metus. Ornare consequat, vulputate sit maecenas mauris urna sed fringilla. Urna fermentum iaculis pharetra, maecenas dui nullam nullam rhoncus. Facilisis quis vulputate sem gravida lacus, justo placerat.</p>
             <p className='text-[13px] md:text-[14px] text-[#222222] font-Jost leading-[30px] mt-[60px] mb-[50px]'>
                 She'd years darkness days. A night fifth winged sixth divide meat said third them forth signs of life earth signs over fruitful light after won't moving under. Thing yielding upon seed. Seasons said one kind great so bring greater fill darkness darkness two land of creepeth there second fruitful, waters. Make don't void years Gathering gathering divide fill.
