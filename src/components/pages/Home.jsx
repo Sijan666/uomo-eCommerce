@@ -1,4 +1,5 @@
 
+import Ads from "../layouts/Ads"
 import Banner from "../layouts/Banner"
 import Spring from "../layouts/Spring"
 import TrendProduct from "../layouts/TrendProduct"
@@ -10,6 +11,7 @@ const Home = () => {
         <Banner/>
         <TrendProduct/>
         <Spring/>
+        <Ads/>
         </>
     )
 }
