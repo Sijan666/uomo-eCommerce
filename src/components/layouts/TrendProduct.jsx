@@ -1,101 +1,123 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Container from '../Container'
 import ProductforTrendy from '../ProductforTrendy'
 import product from '../../assets/product.png'
+import mixitup from 'mixitup';
 
 const TrendProduct = () => {
+
+    const containerRef = useRef(); 
+    useEffect(() => {
+        if (containerRef.current) {
+        mixitup(containerRef.current, {
+            animation: {
+                duration: 400,
+            },
+            selectors: {
+                target: '.mix'
+            }
+        });
+    }
+},);
+
     return (
         <>
         <section id='trendyProduct'>
             <div className="pt-[94px] pb-25">
                 <Container>
                     <div className="heading">
-                        <h3 className='text-center font-Jost text-[35px] text-[#222222]'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h3>
+                        <h3 className='text-center font-Jost text-[20px] lg:text-[35px] text-[#222222]'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h3>
                     </div>
+                    {/* all buttons */}
                     <div className="mt-[29px]">
-                        <div className="flex justify-center gap-x-13">
-                            <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>ALL</button>
-                            <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>NEWARRIVALS</button>
-                            <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>BEST SELLER </button>
-                            <button className='text-[#767676] font-Jost cursor-pointer font-medium text-base hover:text-[#222222] duration-300'>TOP RATING</button>
+                        <div className="flex flex-col md:flex-row gap-y-6 justify-center gap-x-13">
+                            <button data-filter=".all" className='beforeAfter font-medium text-[10px] md:text-base '>ALL</button>
+                            <button data-filter=".new" className='beforeAfter font-medium text-[10px] md:text-base '>NEWARRIVALS</button>
+                            <button data-filter=".best" className='beforeAfter font-medium text-[10px] md:text-base '>BEST SELLER </button>
+                            <button data-filter=".top" className='beforeAfter font-medium text-[10px] md:text-base '>TOP RATING</button>
                         </div>
                     </div>
                     <div className="mt-[41px]">
-                        <div className="flex gap-x-7.5 justify-between">
-                            <div className="w-1/4">
+                        {/* all products */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7.5" ref={containerRef}>
+                            {/* 1st product */}
+                            <div className="mix all new">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Cropped Faux Leather Jacket'}
-                                    productPrice={'$62'}
-                                    // offerPrice={'$99'}
+                                    productPrice={'$29'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 2nd product */}
+                            <div className="mix all new">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Calvin Shorts'}
                                     productPrice={'$62'}
-                                    // offerPrice={'$99'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 3rd product */}
+                            <div className="mix all best">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Kirby T-Shirt'}
-                                    productPrice={'$62'}
-                                    // offerPrice={'$99'}
+                                    productPrice={'$17'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 4th product */}
+                            <div className="mix all best">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Cableknit Shawl'}
-                                    productPrice={'$62'}
-                                    // offerPrice={'$99'}
+                                    productPrice={'$129'}
+                                    offerPrice={'$99'}
                                 />
                             </div>
-                        </div>
-                        <div className="flex gap-x-7.5 mt-12.5 justify-between">
-                            <div className="w-1/4">
+                            {/* 2nd line */}
+                            {/* 5th product */}
+                            <div className="mix all top">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Colorful Jacket'}
-                                    productPrice={'$62'}
-                                    // offerPrice={'$99'}
+                                    productPrice={'$29'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 6th product */}
+                            <div className="mix all top">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Shirt In Botanical Cheetah Print'}
                                     productPrice={'$62'}
-                                    // offerPrice={'$99'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 7th product */}
+                            <div className="mix all best">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Cotton Jersey T-Shirt'}
-                                    productPrice={'$62'}
-                                    // offerPrice={'$99'}
+                                    productPrice={'$17'}
                                 />
                             </div>
-                            <div className="w-1/4">
+                            {/* 8th product */}
+                            <div className="mix all top">
                                 <ProductforTrendy className={''}
                                     productImg={product}
                                     productType={'Dresses'}
                                     productTitle={'Zessi Dresses'}
-                                    productPrice={'$62'}
+                                    productPrice={'$129'}
                                     offerPrice={'$99'}
                                 />
                             </div>
+                        </div>
+                        <div className="btn mt-[42px] text-center">
+                            <button className='font-Jost text-[14px] font-medium text-[#222222] beforeAfter '>SEE ALL PRODUCT</button>
                         </div>
                     </div>
                 </Container>
