@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '../Container'
 import Image from '../Image'
-import blogImg from '../../../public/blog/blog.png'
-import img01 from '../../../public/blog/img01.png'
-import img02 from '../../../public/blog/img02.png'
+import blogImg from '../../assets/blog/blog.png'
+import img01 from '../../assets/blog/img01.png'
+import img02 from '../../assets/blog/img02.png'
 import Button from '../Button'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { FaStar } from 'react-icons/fa'
@@ -93,7 +93,7 @@ const Blog = () => {
 
                 {/* Review 1 */}
                 <div className='flex gap-4 pb-[23px] border-b border-[#E4E4E4] mb-10'>
-                    <div className='w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#E4E4E4] flex-shrink-0'></div>
+                    <div className='w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#E4E4E4] shrink-0'></div>
                     <div className='flex-1'>
                         <div className='flex justify-between items-start'>
                             <div>
@@ -114,7 +114,7 @@ const Blog = () => {
 
                 {/* Review 2 */}
                 <div className='flex gap-4'>
-                    <div className='w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#E4E4E4] flex-shrink-0'></div>
+                    <div className='w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#E4E4E4] shrink-0'></div>
                     <div className='flex-1'>
                         <div className='flex justify-between items-start'>
                             <div>
