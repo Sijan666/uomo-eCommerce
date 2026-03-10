@@ -18,10 +18,10 @@ const Banner = () => {
         <section className="relative w-full" id='banner'>
             {/* Left Social Sidebar */}
             <div className="hidden md:flex md:flex-col absolute left-0 top-0 h-full w-[4%] items-center justify-center gap-4 lg:gap-6 z-10">
-                <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaFacebookF size={14} /></a>
-                <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaTwitter size={14} /></a>
-                <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaInstagram size={14} /></a>
-                <a href="#" className="text-[#767676] hover:text-gray-800 transition-colors"><FaPinterestP size={12} /></a>
+                <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaFacebookF size={14} /></button>
+                <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaTwitter size={14} /></button>
+                <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaInstagram size={14} /></button>
+                <button href="#" className="text-[#767676] hover:text-gray-800 transition-colors cursor-pointer"><FaPinterestP size={12} /></button>
                 <div className="mt-[18px]">
                     <span className="text-[10px] lg:text-[14px] font-Jost font-medium text-[#767676] leading-6"
                         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>

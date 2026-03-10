@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <section className="bg-[#e4e4e4] relative">
-      <Container className="py-[100px]">
+      <Container className="pt-[100px] ">
         <div className="flex flex-col gap-y-10 lg:flex-row lg:justify-between">
           {/* 1st */}
           <div className="h-[255.26px] text-center md:text-left">
@@ -122,9 +122,9 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <div className="w-[45px] h-[45px] absolute bottom-0 right-0 bg-white p-4 flex items-center justify-center">
+      {/* <div className="w-[45px] h-[45px] absolute bottom-0 right-0 bg-white p-4 flex items-center justify-center">
         <img src="./src/assets/arrow.png" alt="" />
-      </div>
+      </div> */}
     </section>
   );
 };
