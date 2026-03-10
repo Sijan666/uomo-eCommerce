@@ -44,8 +44,14 @@
 }
 /* banner */
 
-/* Trend product */
+/* common before after for buttons */
 .beforeAfter{
     @apply relative pb-1 text-[#767676] font-Jost cursor-pointer hover:text-[#222222] duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-0.5 after:bg-[#222222] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300
 }
-/* Trend product */
+.beforeAfter2{
+    @apply relative pb-1 text-white font-Jost cursor-pointer duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300
+}
+.beforeAfter3{
+    @apply relative pb-1 text-[#222222] font-Jost cursor-pointer duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-0.5 after:bg-[#222222] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300
+}
+/* common before after for buttons */
