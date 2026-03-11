@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "../Container";
 import Image from "../Image";
-import card3 from '../../assets/card3.png'
-import card2 from '../../assets/card2.png'
-import card1 from '../../assets/card1.png'
-import card4 from '../../assets/card4.png'
-import card5 from '../../assets/card5.png'
-import card6 from '../../assets/card6.png'
+import card1 from '../../assets/Lookbook/card1.png'
+import card2 from '../../assets/Lookbook/card2.png'
+import card3 from '../../assets/Lookbook/card3.png'
+import card4 from '../../assets/Lookbook/card4.png'
+import card5 from '../../assets/Lookbook/card5.png'
+import card6 from '../../assets/Lookbook/card6.png'
 
 
 const Lookbook = () => {
@@ -29,6 +29,8 @@ const Lookbook = () => {
               </div>
 
               {/* <img
+                src="/src/assets/Lookbook/card1.png"
+                src="/src/assets/Lookbook/card1.png"
                 src="/src/assets/Lookbook/card1.png"
                 alt=""
                 className="absolute  right-2.5 mix-blend-multiply "
