@@ -6,6 +6,7 @@ import card2 from '../../assets/card2.png'
 import card1 from '../../assets/card1.png'
 import card4 from '../../assets/card4.png'
 import card5 from '../../assets/card5.png'
+import card6 from '../../assets/card6.png'
 
 
 const Lookbook = () => {
@@ -127,11 +128,12 @@ const Lookbook = () => {
               </h2>
             </div>
 
-            <img
+            {/* <img
               src="/src/assets/Lookbook/card6.png"
               alt=""
               className="absolute  left-[233px] "
-            />
+            /> */}
+            <Image imgSrc={card6} className={'absolute  left-[233px]'}/>
           </div>
         </div>
       </div>
