@@ -46,7 +46,11 @@ const Header = () => {
                                         </li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack">COLLECTION</li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack">JOURNAL</li>
-                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">LOOKBOOK</li>
+                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">
+                                            <Link to={'/lookbook'}>
+                                                LOOKBOOK
+                                            </Link>
+                                        </li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack">PAGES</li>
                                     </ul>
                                 </nav>
@@ -89,7 +93,11 @@ const Header = () => {
                                         </li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack cursor-pointer">COLLECTION</li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack cursor-pointer">JOURNAL</li>
-                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack cursor-pointer">LOOKBOOK</li>
+                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">
+                                            <Link to={'/lookbook'}>
+                                                LOOKBOOK
+                                            </Link>
+                                        </li>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack cursor-pointer">PAGES</li>
                                     </ul>
                                     <div className="flex justify-between mt-8 px-5">
