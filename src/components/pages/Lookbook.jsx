@@ -4,7 +4,7 @@ import Container from "../Container";
 
 const Lookbook = () => {
   return (
-    <Container>
+    <Container className="mt-[96px]">
       <h1 className="text-[35px] font-Jost font-bold">LOOKBOOK</h1>
 
       <div className=" grid grid-cols-2 gap-[30px] mt-[42px]">
@@ -24,7 +24,7 @@ const Lookbook = () => {
               <img
                 src="/src/assets/Lookbook/card1.png"
                 alt=""
-                className="absolute  right-[10px] mix-blend-multiply border-[0.5px] border-black-100 "
+                className="absolute  right-[10px] mix-blend-multiply "
               />
             </div>
           </div>
@@ -124,15 +124,13 @@ const Lookbook = () => {
           </div>
         </div>
       </div>
-      
-        <div className="mx-auto w-full group inline-flex flex-col items-center mt-[40px] mb-[101px] cursor-pointer">
-        <a className="text-[#222222] font-medium text-[14px] leading-10">
-          SHOW MORE
+      <div className="flex flex-col items-center cursor-pointer mt-[40px] mb-[101px]">
+        <a className="group text-[#222222] font-medium text-[14px] leading-10">SHOW MORE 
+          <div className="w-full h-[2px] bg-[#222222] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
         </a>
-
-        <div className="w-[75px] h-[3px] bg-[#222222] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+        
       </div>
-      
+
     </Container>
   );
 };
