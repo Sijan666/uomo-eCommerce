@@ -1,6 +1,7 @@
 
 import React from "react";
 import Container from "../Container";
+import { Link } from "react-router-dom";
 // import bg from "../../assets/error.png";
 
 const Error = () => {
@@ -38,11 +39,13 @@ const Error = () => {
         <div className="bg-[url('/src/assets/error2.jpg')] bg-center bg-cover bg-no-repeat w-full py-[319px]">
           <Container>
             <div className="text-center">
-              <h3 className="text-[#222222] font-bold font-Jost text-[100px]">OOPS!</h3>
+              <h3 className="text-[#222222] font-bold font-Jost text-[50px] md:text-[100px]">OOPS!</h3>
               <h4 className="text-[26px] font-Jost text-[#222222]">Page not found.</h4>
-              <p className="pt-[13px] pb-6 text-[14px] text-[#222222] font-Jost leading-6 w-[475px] mx-auto">Sorry, we couldn't find the page you where looking for. We suggest that you return to home page.</p>
+              <p className="pt-[13px] pb-6 text-[10px] md:text-[14px] text-[#222222] font-Jost leading-6 md:w-[475px] mx-auto">Sorry, we couldn't find the page you where looking for. We suggest that you return to home page.</p>
               <div className="btn">
-                <button className="pr-[137px] pl-[140px] pt-[21px] pb-[15px] bg-[#222222] text-white text-[14px] font-Jost font-medium cursor-pointer">GO BACK</button>
+                <Link to={'/'}>
+                  <button className="md:pr-[137px] px-10 py-4 md:pl-[140px] md:pt-[21px] md:pb-[15px] bg-[#222222] text-white text-[14px] font-Jost font-medium cursor-pointer">GO BACK</button>
+                </Link>
               </div>
             </div>
           </Container>
