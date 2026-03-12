@@ -71,6 +71,16 @@ const BlogList = () => {
     if (activeIndex > 0) animate(activeIndex - 1, "prev");
   };
 
+  const handlePageClick = (num) => {
+    const dir = num > activeIndex + 1 ? "next" : "prev";
+    animate(num - 1, dir);
+  };
+
+  const handleCategoryClick = (i) => {
+    const dir = i > activeIndex ? "next" : "prev";
+    animate(i, dir);
+  };
+
   const currentCategory = categories[activeIndex];
   const pageNum = activeIndex + 1;
   const visiblePages = getVisiblePages(pageNum);
@@ -92,34 +102,35 @@ const BlogList = () => {
         {/* Filter Labels */}
         <div className="mb-[50px] flex flex-wrap gap-y-4 gap-x-10">
           {categories.map((cat, i) => (
-            <span
+            <button
               key={cat.label}
-              className={`font-Jost font-medium text-[14px] relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#222222] after:transition-all after:duration-300
+              onClick={() => handleCategoryClick(i)}
+              className={`font-Jost font-medium text-[14px] cursor-pointer relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#222222] after:transition-all after:duration-300
                 ${activeIndex === i
                   ? "text-[#222222] after:w-full"
-                  : "text-[#767676] after:w-0"
+                  : "text-[#767676] after:w-0 hover:text-[#222222] hover:after:w-full"
                 }`}
             >
               {cat.label}
-            </span>
+            </button>
           ))}
         </div>
 
         {/* Blog List */}
         <div className={`transition-all duration-300 ${slideClass}`}>
           {currentCategory.blogs.map((item) => (
-            <div key={item.id} className="flex flex-col sm:flex-row gap-[51px] mb-[50px]">
-              <div className="flex-shrink-0 w-full sm:w-[690px]">
-                <img src={item.img} alt={item.title} className="w-full h-[500px] object-cover" />
+            <div key={item.id} className="flex flex-col lg:flex-row gap-[51px] mb-[50px]">
+              <div className="w-full lg:w-[690px] flex-shrink-0">
+                <img src={item.img} alt={item.title} className="w-full h-[300px] lg:h-[500px] object-cover" />
               </div>
               <div className="flex flex-col justify-center">
-                <p className="font-Jost text-[14px] text-[#767676] mb-[10px]">
+                <p className="font-Jost text-[14px] text-[#767676] mb-[4px]">
                   BY {item.author} &nbsp;&nbsp; {item.date}
                 </p>
-                <h2 className="font-Jost font-medium text-[18px] lg:text-[20px] text-[#222222] leading-[28px] mb-[15px]">
+                <h2 className="font-Jost text-[20px] lg:text-[26px] text-[#222222]">
                   {item.title}
                 </h2>
-                <p className="font-Jost text-[13px] lg:text-[14px] text-[#767676] leading-[24px] mb-[20px]">
+                <p className="font-Jost text-[13px] lg:text-[14px] text-[#222222] leading-[24px] mt-[27px] mb-[10px]">
                   {item.desc}
                 </p>
                 <button className="beforeAfter font-Jost font-medium text-[12px] text-[#222222] self-start">
@@ -134,29 +145,30 @@ const BlogList = () => {
         <div className="flex items-center justify-between mt-[10px]">
           <button
             onClick={handlePrev}
-            className={`flex items-center gap-1 font-Jost text-[13px] font-medium ${activeIndex === 0 ? "text-[#CCCCCC] cursor-not-allowed" : "text-[#222222] cursor-pointer"}`}
+            className={`flex items-center gap-1 font-Jost text-[14px] font-medium ${activeIndex === 0 ? "text-[#CCCCCC] cursor-not-allowed" : "text-[#222222] cursor-pointer"}`}
           >
             <MdKeyboardArrowLeft size={18} /> PREV
           </button>
 
           <div className="flex gap-6">
             {visiblePages.map((num) => (
-              <span
+              <button
                 key={num}
-                className={`font-Jost text-[13px] font-medium relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#222222] after:transition-all after:duration-300
+                onClick={() => handlePageClick(num)}
+                className={`font-Jost text-[14px] font-medium cursor-pointer relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#222222] after:transition-all after:duration-300
                   ${pageNum === num
                     ? "text-[#222222] after:w-full"
-                    : "text-[#767676] after:w-0"
+                    : "text-[#767676] after:w-0 hover:text-[#222222] hover:after:w-full"
                   }`}
               >
                 {num}
-              </span>
+              </button>
             ))}
           </div>
 
           <button
             onClick={handleNext}
-            className={`flex items-center gap-1 font-Jost text-[13px] font-medium ${activeIndex === categories.length - 1 ? "text-[#CCCCCC] cursor-not-allowed" : "text-[#222222] cursor-pointer"}`}
+            className={`flex items-center gap-1 font-Jost text-[14px] font-medium ${activeIndex === categories.length - 1 ? "text-[#CCCCCC] cursor-not-allowed" : "text-[#222222] cursor-pointer"}`}
           >
             NEXT <MdKeyboardArrowRight size={18} />
           </button>
