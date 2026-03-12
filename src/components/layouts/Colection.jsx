@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Container'
 import women from '../../assets/women.png'
-import men from '../../assets/men.png'
+import men from '../../assets/men2.png'
 import kind from '../../assets/kind.png'
 import gift from '../../assets/gift.png'
 
