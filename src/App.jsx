@@ -7,11 +7,9 @@ import Blog from './components/pages/Blog'
 import Shop from './components/pages/Shop'
 import ContactUs from './components/pages/ContactUs'
 import About from './components/pages/About'
-<<<<<<<<< Temporary merge branch 1
 import Locator from './components/pages/Locator'
-=========
 import Lookbook from './components/pages/Lookbook'
->>>>>>>>> Temporary merge branch 2
+import BlogList from './components/pages/BlogList'
 
 
 function App() {
@@ -24,11 +22,9 @@ function App() {
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<ContactUs/>} />
           <Route path="/about" element={<About/>} />
-<<<<<<<<< Temporary merge branch 1
            <Route path="/locator" element={<Locator/>} />
-=========
           <Route path="/lookbook" element={<Lookbook/>} />
->>>>>>>>> Temporary merge branch 2
+          <Route path="/list" element={<BlogList/>} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
