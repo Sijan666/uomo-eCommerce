@@ -1,6 +1,7 @@
 
 import Ads from "../layouts/Ads"
 import Banner from "../layouts/Banner"
+import Collection from "../layouts/Collection"
 import FooterTop from "../layouts/FooterTop"
 import LimitedEdition from "../layouts/LimitedEdition"
 import NewPromo from "../layouts/newPromo"
@@ -13,6 +14,7 @@ const Home = () => {
     return (
         <>
         <Banner/>
+        <Collection/>
         <TrendProduct/>
         <Spring/>
         {/* <PromoBannerShowcase/> */}
