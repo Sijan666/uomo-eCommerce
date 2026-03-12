@@ -63,6 +63,10 @@
 .beforeAfterBlack {
   @apply relative pb-1 uppercase cursor-pointer duration-300 font-Jost text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-0.5 after:bg-black after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300;
 }
+
+.beforeAfterwhite {
+  @apply relative pb-1 uppercase cursor-pointer duration-300 font-Jost  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-0.5 after:bg-white after:text-white after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300;
+}
 /* beforeAfterBlack */
 
 /* swiper  */
