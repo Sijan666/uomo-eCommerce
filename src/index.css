@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-Jost: "Jost", sans-serif;
-  /* --shadow-newMade: 0 28px 30px rgba(99, 122, 166, 0.05); */
+    --font-Jost: "Jost", sans-serif; 
+    /* --shadow-newMade: 0 28px 30px rgba(99, 122, 166, 0.05); */
 }
 
 /* banner */
@@ -75,3 +75,4 @@
   color: #222;
 }
 /* swiper  */
+
