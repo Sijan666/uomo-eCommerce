@@ -7,7 +7,7 @@ import Blog from './components/pages/Blog'
 import Shop from './components/pages/Shop'
 import ContactUs from './components/pages/ContactUs'
 import About from './components/pages/About'
-import TarmsAndCondition from './components/pages/TarmsAndCondition'
+import TermsAndCondition from './components/pages/TermsAndCondition'
 
 
 function App () {
@@ -20,7 +20,7 @@ function App () {
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<ContactUs/>} />
           <Route path="/about" element={<About/>} />
-          <Route path="/tarms" element={<TarmsAndCondition/>} />
+          <Route path="/terms" element={<TermsAndCondition/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
