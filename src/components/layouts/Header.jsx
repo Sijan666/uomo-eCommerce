@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import Container from '../Container'
 import logo from '../../assets/logo.png'

@@ -8,6 +8,8 @@ import ContactUs from "./components/pages/ContactUs";
 import About from "./components/pages/About";
 import Lookbook from "./components/pages/Lookbook";
 import Locator from "./components/pages/Locator";
+import TermsAndCondition from "./components/pages/TermsAndCondition";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/lookbook" element={<Lookbook />} />
           <Route path="/locator" element={<Locator />} />
+          <Route path="/terms" element={<TermsAndCondition />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
