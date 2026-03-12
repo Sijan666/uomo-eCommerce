@@ -12,7 +12,7 @@ const ComingSoon = () => {
       <div className="min-h-screen max-w-[771px] mx-auto md:mx-auto lg:mx-auto flex justify-center bg-cover bg-center bg-no-repeat relative md:px-0 lg:px-0">
         <div className=" lg:h-[407px] w-full mt-[120px] md:mt-[160px] lg:mt-[212px] absolute">
           {/* Heading */}
-          <h1 className="lg:w-[771px] lg:h-[145px] text-[48px] md:text-[70px] lg:text-[100px]  flex items-center justify-center font-black uppercase text-[#222222] tracking-tighter font-Jost font-bold">
+          <h1 className="lg:w-[771px] lg:h-[145px] text-[30px] mb-5 md:mb-0 md:text-[70px] lg:text-[100px]  flex items-center justify-center font-black uppercase text-[#222222] tracking-tighter font-Jost font-bold">
             Coming Soon
           </h1>
 
@@ -40,7 +40,7 @@ const ComingSoon = () => {
 
             <button
               className="bg-black text-white pt-[20px] pb-[16px] pl-[61px] pr-[69px] text-[14px] font-medium uppercase font-Jost hover:bg-[#767676] transition-colors
-               w-full md:w-[150px] h-[60px]"
+               w-full md:w-[150px] h-[60px] cursor-pointer duration-300"
             >
               Join
             </button>
