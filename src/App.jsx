@@ -9,6 +9,7 @@ import About from "./components/pages/About";
 import Lookbook from "./components/pages/Lookbook";
 import Locator from "./components/pages/Locator";
 import TermsAndCondition from "./components/pages/TermsAndCondition";
+import BlogList from "./components/pages/BlogList";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/lookbook" element={<Lookbook />} />
           <Route path="/locator" element={<Locator />} />
           <Route path="/terms" element={<TermsAndCondition />} />
+          <Route path="/blogList" element={<BlogList />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

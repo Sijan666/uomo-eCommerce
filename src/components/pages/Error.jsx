@@ -36,7 +36,7 @@ const Error = () => {
     <>
     <section id="error">
       <div className="">
-        <div className="bg-[url('/src/assets/error2.jpg')] bg-center bg-cover bg-no-repeat w-full py-[319px]">
+        <div className="bg-[url('/src/assets/error2.jpg')] bg-center bg-cover bg-no-repeat w-full py-[310px]">
           <Container>
             <div className="text-center">
               <h3 className="text-[#222222] font-bold font-Jost text-[50px] md:text-[100px]">OOPS!</h3>

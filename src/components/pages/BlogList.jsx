@@ -120,17 +120,17 @@ const BlogList = () => {
         <div className={`transition-all duration-300 ${slideClass}`}>
           {currentCategory.blogs.map((item) => (
             <div key={item.id} className="flex flex-col lg:flex-row gap-[51px] mb-[50px]">
-              <div className="w-full lg:w-[690px] flex-shrink-0">
+              <div className="w-full lg:w-[690px] shrink-0">
                 <img src={item.img} alt={item.title} className="w-full h-[300px] lg:h-[500px] object-cover" />
               </div>
               <div className="flex flex-col justify-center">
-                <p className="font-Jost text-[14px] text-[#767676] mb-[4px]">
+                <p className="font-Jost text-[14px] text-[#767676] mb-1">
                   BY {item.author} &nbsp;&nbsp; {item.date}
                 </p>
                 <h2 className="font-Jost text-[20px] lg:text-[26px] text-[#222222]">
                   {item.title}
                 </h2>
-                <p className="font-Jost text-[13px] lg:text-[14px] text-[#222222] leading-[24px] mt-[27px] mb-[10px]">
+                <p className="font-Jost text-[13px] lg:text-[14px] text-[#222222] leading-6 mt-[27px] mb-2.5">
                   {item.desc}
                 </p>
                 <button className="beforeAfter font-Jost font-medium text-[12px] text-[#222222] self-start">
@@ -142,7 +142,7 @@ const BlogList = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-between mt-[10px]">
+        <div className="flex items-center justify-between mt-2.5">
           <button
             onClick={handlePrev}
             className={`flex items-center gap-1 font-Jost text-[14px] font-medium ${activeIndex === 0 ? "text-[#CCCCCC] cursor-not-allowed" : "text-[#222222] cursor-pointer"}`}
