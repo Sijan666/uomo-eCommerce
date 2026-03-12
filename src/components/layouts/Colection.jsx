@@ -7,7 +7,7 @@ import gift from '../../assets/gift.png'
 
 const Colection = () => {
   return (
-    <div className='pt-[101px]'>
+    <div className='pt-[101px] pb-0'>
      <Container>
         <div className="main xl:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 grid-rows-2 2xl:gap-[30px] xl:gap-x-[30px] md-gap-3 sm:h-[200px] md:h-5 lg:h-[300px] xl:h-[600px]">
 
