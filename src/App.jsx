@@ -11,6 +11,7 @@ import Locator from "./components/pages/Locator";
 import TermsAndCondition from "./components/pages/TermsAndCondition";
 import BlogList from "./components/pages/BlogList";
 import ComingSoon from "./components/pages/ComingSoon";
+import Cart from "./components/pages/Cart";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/terms" element={<TermsAndCondition />} />
           <Route path="/blogList" element={<BlogList />} />
           <Route path="/comingSoon" element={<ComingSoon />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
