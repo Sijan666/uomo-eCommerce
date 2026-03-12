@@ -2,8 +2,9 @@
 import Home from './components/pages/Home'
 import { Routes , Route } from 'react-router-dom'
 import RootLayouts from './components/layouts/RootLayouts'
-// import About from './components/pages/About'
+
 import Error from './components/pages/Error'
+import StoreLocation from './components/pages/StoreLocation'
 
 
 function App () {
@@ -12,7 +13,7 @@ function App () {
       <Routes>
         <Route path="/" element={<RootLayouts />}>
           <Route index element={<Home/>} />
-          {/* <Route path="/about" element={<About/>} /> */}
+          <Route path="/store" element={<StoreLocation/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>
