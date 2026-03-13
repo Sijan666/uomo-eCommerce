@@ -76,3 +76,139 @@
   color: #222;
 }
 /* swiper  */
+
+
+/* for normal input css */
+.input-container {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 21px 22px 15px 22px;
+  border: 2px solid #E4E4E4;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #222222;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #222222;
+  box-shadow: 0 0 0 1px #222222;
+}
+
+.label {
+  position: absolute;
+  left: 18px;
+  pointer-events: none;
+  background-color: white;
+  padding: 0 4px;
+  font-family: 'Jost', sans-serif;
+  transition-duration: 300ms;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #767676;
+}
+
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+  top: 0;
+  font-size: 12px;
+  color: #222222;
+}
+
+/* for select input css */
+.select-container {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  border: 2px solid #E4E4E4;
+  padding: 18px 22px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #222222;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  outline: none;
+  background-color: transparent;
+}
+
+.select:focus {
+  border-color: #222222;
+  box-shadow: 0 0 0 1px #222222;
+}
+
+.select-label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  pointer-events: none;
+  background-color: white;
+  padding: 0 4px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #767676;
+  transition-duration: 300ms;
+}
+
+.select:focus ~ .select-label,
+.select:valid ~ .select-label {
+  top: 0;
+  font-size: 12px;
+  color: #222222;
+}
+
+/* for textarea */
+.textarea-container {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  padding: 21px 22px 15px 22px;
+  border: 1px solid #E4E4E4;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  color: #222222;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 200px;
+}
+
+.textarea:focus {
+  border-color: #222222;
+  box-shadow: 0 0 0 1px #222222;
+}
+
+.textarea-label {
+  position: absolute;
+  left: 18px;
+  pointer-events: none;
+  background-color: white;
+  padding: 0 4px;
+  font-family: 'Jost', sans-serif;
+  transition-duration: 300ms;
+  
+  top: 21px;
+  transform: translateY(0); 
+  font-size: 14px;
+  color: #767676;
+}
+
+.textarea:focus ~ .textarea-label,
+.textarea:not(:placeholder-shown) ~ .textarea-label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #222222;
+}

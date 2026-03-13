@@ -182,7 +182,7 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className="mt-5">
-                                <Link to={'/'}>
+                                <Link to={'/shipping'}>
                                     <Button btnText={'PROCEED TO CHECKOUT'} className={'text-[14px] w-full font-Jost font-medium text-white bg-[#222222] px-15 md:pr-[118px] md:pl-[139px] pt-[21px] pb-[15px]'}/>
                                 </Link>
                             </div>

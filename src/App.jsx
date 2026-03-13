@@ -12,6 +12,7 @@ import TermsAndCondition from "./components/pages/TermsAndCondition";
 import BlogList from "./components/pages/BlogList";
 import ComingSoon from "./components/pages/ComingSoon";
 import Cart from "./components/pages/Cart";
+import Shipping from "./components/pages/Shipping";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/blogList" element={<BlogList />} />
           <Route path="/comingSoon" element={<ComingSoon />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/shipping" element={<Shipping />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
