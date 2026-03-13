@@ -14,6 +14,8 @@ import ComingSoon from "./components/pages/ComingSoon";
 import Cart from "./components/pages/Cart";
 import Shipping from "./components/pages/Shipping";
 import ReceivedOrder from "./components/pages/ReceivedOrder";
+import Login from "./components/pages/Login";
+import Register from "./components/pages/Register";
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/receivedOrder" element={<ReceivedOrder/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Container";
 
-const TarmsAndCondition = () => {
+const TermsAndCondition = () => {
   return (
     <div className="">
       <Container className="pt-24 pb-[140px] md:px-24">
@@ -105,4 +105,4 @@ const TarmsAndCondition = () => {
   );
 };
 
-export default TarmsAndCondition;
+export default TermsAndCondition;
