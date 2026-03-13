@@ -13,6 +13,7 @@ import BlogList from "./components/pages/BlogList";
 import ComingSoon from "./components/pages/ComingSoon";
 import Cart from "./components/pages/Cart";
 import Shipping from "./components/pages/Shipping";
+import ReceivedOrder from "./components/pages/ReceivedOrder";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/comingSoon" element={<ComingSoon />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/shipping" element={<Shipping />} />
+          <Route path="/receivedOrder" element={<ReceivedOrder/>} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

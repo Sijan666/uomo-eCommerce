@@ -163,7 +163,7 @@ const Shipping = () => {
                                         <label className="flex items-start gap-[15px] cursor-pointer w-fit">
                                             <input type="radio" name="payment" value="bank" checked={selectedMethod === "bank"} onChange={() => setSelectedMethod("bank")} className="hidden"/>
                                             {/* radio btn */}
-                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200 ${selectedMethod === "bank" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
+                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300 ${selectedMethod === "bank" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
                                                 {selectedMethod === "bank" && (
                                                 <div className="h-2 w-2 rounded-full bg-[#222222]"></div>
                                                 )}
@@ -184,7 +184,7 @@ const Shipping = () => {
                                     <div id='check'>
                                         <label className="flex items-center gap-[15px] cursor-pointer w-fit">
                                             <input type="radio" name="payment" value="check" checked={selectedMethod === "check"} onChange={() => setSelectedMethod("check")} className="hidden"/>
-                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200 ${selectedMethod === "check" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
+                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300 ${selectedMethod === "check" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
                                                 {selectedMethod === "check" && (
                                                 <div className="h-2 w-2 rounded-full bg-[#222222]"></div>
                                                 )}
@@ -196,7 +196,7 @@ const Shipping = () => {
                                     <div className='cash'>
                                         <label className="flex items-center gap-[15px] cursor-pointer w-fit">
                                             <input type="radio" name="payment" value="cod" checked={selectedMethod === "cod"} onChange={() => setSelectedMethod("cod")} className="hidden"/>
-                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200 ${selectedMethod === "cod" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
+                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300 ${selectedMethod === "cod" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
                                                 {selectedMethod === "cod" && (
                                                 <div className="h-2 w-2 rounded-full bg-[#222222]"></div>
                                                 )}
@@ -208,7 +208,7 @@ const Shipping = () => {
                                     <div id='paypal'>
                                         <label className="flex items-center gap-[15px] cursor-pointer w-fit">
                                             <input type="radio" name="payment" value="paypal" checked={selectedMethod === "paypal"} onChange={() => setSelectedMethod("paypal")}className="hidden"/>
-                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200 ${selectedMethod === "paypal" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
+                                            <div className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300 ${selectedMethod === "paypal" ? "border-[#222222]" : "border-[#E4E4E4]"}`}>
                                                 {selectedMethod === "paypal" && (
                                                 <div className="h-2 w-2 rounded-full bg-[#222222]"></div>
                                                 )}
@@ -229,7 +229,7 @@ const Shipping = () => {
                                 </div>
                             </div>
                             <div className="mt-5">
-                                <Link to={'/'}>
+                                <Link to={'/receivedOrder'}>
                                     <Button btnText={'PLACE ORDER'} className={'text-[14px] w-full font-Jost font-medium text-white bg-[#222222] md:pr-[163px] md:pl-[164px] pt-[21px] pb-[15px]'}/>
                                 </Link>
                             </div>
