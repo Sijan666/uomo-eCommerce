@@ -16,6 +16,7 @@ import Shipping from "./components/pages/Shipping";
 import ReceivedOrder from "./components/pages/ReceivedOrder";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
+import Tracking from "./components/pages/Tracking";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/receivedOrder" element={<ReceivedOrder/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/tracking" element={<Tracking/>} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
