@@ -17,6 +17,7 @@ import ReceivedOrder from "./components/pages/ReceivedOrder";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
 import Tracking from "./components/pages/Tracking";
+import ShopPage from "./components/pages/ShopPage";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/lookbook" element={<Lookbook />} />
+          <Route path="/shopPage" element={<ShopPage />} />
           <Route path="/locator" element={<Locator />} />
           <Route path="/terms" element={<TermsAndCondition />} />
           <Route path="/blogList" element={<BlogList />} />
