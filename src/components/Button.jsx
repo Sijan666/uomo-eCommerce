@@ -1,8 +1,8 @@
 
 
-const Button = ({btnText , className}) => {
+const Button = ({btnText , className , onClick}) => {
     return (
-        <button className={`cursor-pointer duration-500 ${className}`}>{btnText}</button>
+        <button className={`cursor-pointer duration-500 ${className}`} onClick={onClick}>{btnText}</button>
     )
 }
 
