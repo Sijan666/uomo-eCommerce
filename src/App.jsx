@@ -31,7 +31,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/lookbook" element={<Lookbook />} />
-          <Route path="/shopPage" element={<ShopPage />} />
+          <Route path="/shopList" element={<ShopPage />} />
           <Route path="/locator" element={<Locator />} />
           <Route path="/terms" element={<TermsAndCondition />} />
           <Route path="/blogList" element={<BlogList />} />
