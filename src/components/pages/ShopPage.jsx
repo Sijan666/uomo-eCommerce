@@ -172,35 +172,38 @@ const ShopPage = () => {
         : "grid-cols-3";
 
   return (
-    <div className="min-h-screen bg-white font-Jost">
-      {/* ── Hero Banner ───────────────────────────────────────────────────── */}
-      <div className="max-w-[1800px] h-[440px] mx-auto relative py-10 object-cover aspect-auto bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${shopListBackground})` }}>
-       <div className="flex flex-col items-center justify-center h-full relative z-10">
-        <h1 className="text-[60px] font-bold text-[#222222] relative z-10">
-          SHOES
-        </h1>
+    <section>
+        {/* ── Hero Banner ───────────────────────────────────────────────────── */}
+      <div className="max-w-[1800px]  mx-auto bg-white font-Jost">
+      
+        <div
+          className="w-[1800px] h-[440px] flex flex-col items-center justify-center relative object-cover aspect-auto bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${shopListBackground})` }}
+        >
+          <div className="flex flex-col items-center justify-center w-[852px] h-[140px] relative z-10 my-[150px]">
+            <h1 className="text-[60px] text-center font-bold text-[#222222] relative z-10 w-[208px] h-[87px]">
+              SHOES
+            </h1>
 
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1 mt-5 relative z-10">
-          {navItems.map((item) => (
-            <span
-              key={item}
-              onClick={() => setActiveNav(item)}
-              className={`text-[16px] font-medium font-Jost uppercase cursor-pointer transition-colors
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1 mt-5 relative z-10">
+              {navItems.map((item) => (
+                <span
+                  key={item}
+                  onClick={() => setActiveNav(item)}
+                  className={`text-[16px] font-medium font-Jost uppercase cursor-pointer transition-colors
                 ${
                   activeNav === item
                     ? "text-[#222222] border-b-2 border-[#222] pb-px"
                     : "hover: beforeAfterBlack"
                 }`}
-            >
-              {item}
-            </span>
-          ))}
-        </nav>
-       </div>
-        
+                >
+                  {item}
+                </span>
+              ))}
+            </nav>
+          </div>
+        </div>
       </div>
-
       {/* ── Body ──────────────────────────────────────────────────────────── */}
       <Container>
         <div className="flex">
@@ -403,7 +406,7 @@ const ShopPage = () => {
           </main>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
