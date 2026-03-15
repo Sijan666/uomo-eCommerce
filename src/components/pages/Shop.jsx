@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "../Container";
 import Image from "../Image";
-import shop1 from "../../assets/shop1.png";
+// import shop1 from "../../assets/shop1.png";
 import shop2 from "../../assets/shop2.png";
 import {
   MdKeyboardArrowLeft,
@@ -65,12 +65,12 @@ const Shop = () => {
       <section id="shop">
         <div className="pt-12.5 pb-25">
           <Container>
-            <div className="md:flex gap-x-15">
+            <div className="lg:flex gap-x-15">
               {/* left side */}
-              <div className="left md:w-[810px]">
-                <div className="md:flex gap-x-2.5">
+              <div className="left lg:w-[810px]">
+                <div className="lg:flex gap-x-2.5">
                   {/* Thumbnail Images */}
-                  <div className="flex flex-wrap gap-x-5 justify-center md:justify-normal md:flex-nowrap mb-5 md:mb-0 md:flex-col gap-y-2.5">
+                  <div className=" flex flex-wrap gap-x-5 justify-center lg:justify-normal lg:flex-nowrap lg:flex-col mb-5 lg:mb-0 gap-y-2.5">
                     {products.map((item, index) => (
                       <div
                         key={item.id}
@@ -81,16 +81,12 @@ const Shop = () => {
                             : "border-transparent"
                         }`}
                       >
-                        <img
-                          src={item.img}
-                          alt="thumb"
-                          className="w-[90px] h-[90px] object-cover"
-                        />
+                        <Image imgSrc={item.img} className="w-[90px] h-[90px] object-cover"/>
                       </div>
                     ))}
                   </div>
 
-                  <div className="relative w-[712px] h-[700px]">
+                  <div className="relative lg:w-[712px] lg:h-[700px]">
                     <Swiper
                       modules={[Navigation]}
                       onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -112,7 +108,7 @@ const Shop = () => {
                             {/* Zoom Icon */}
                             <button
                               onClick={() => setZoomImg(item.img)}
-                              className="absolute bottom-7.5 right-7.5 bg-white w-[40px] h-[40px] rounded-full flex items-center justify-center shadow-md"
+                              className="absolute bottom-7.5 right-7.5 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md"
                             >
                               <MdOutlineZoomOutMap size={18} />
                             </button>
@@ -121,7 +117,7 @@ const Shop = () => {
                       ))}
                     </Swiper>
                     {zoomImg && (
-                      <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[999]">
+                      <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-999">
                         {/* Close Button */}
                         <button
                           onClick={() => setZoomImg(null)}
@@ -151,7 +147,7 @@ const Shop = () => {
                 </div>
               </div>
               {/* right side */}
-              <div className="right md:w-[540px]">
+              <div className="right mt-2 lg:mt-0 lg:w-[540px]">
                 <div className="flex justify-between mt-5 md:mt-0">
                   <p className="text-[#222222] font-Jost font-medium text-[14px] ">
                     HOME / THE SHOP
@@ -273,7 +269,7 @@ const Shop = () => {
 
               {/* desc  */}
               {activeTab === "description" && (
-                <div className="md:w-[930px] mx-auto">
+                <div className="lg:w-[930px] mx-auto">
                   <div className="mt-12.5">
                     <h4 className="text-[#222222] text-base font-Jost font-medium">
                       Sed do eiusmod tempor incididunt ut labore

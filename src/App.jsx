@@ -18,6 +18,7 @@ import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
 import Tracking from "./components/pages/Tracking";
 import Dashboard from "./components/pages/Dashboard";
+import ShopPage from "./components/pages/ShopPage";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/register" element={<Register/>} />
           <Route path="/tracking" element={<Tracking/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/shopList" element={<ShopPage/>} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

@@ -184,7 +184,7 @@ const SidebarContent = ({
             key={c}
             onClick={() => toggleColor(c)}
             style={{ background: c }}
-            className={`w-[16px] h-[16px] rounded-full cursor-pointer transition-transform hover:scale-110
+            className={`w-4 h-4 rounded-full cursor-pointer transition-transform hover:scale-110
               ${selectedColors.includes(c) ? "ring-2 ring-offset-2 ring-[#222222]" : ""}`}
           />
         ))}
@@ -197,7 +197,7 @@ const SidebarContent = ({
           <button
             key={s}
             onClick={() => toggleSize(s)}
-            className={`text-[14px] font-jost font-normal border w-[58px] h-[32px] transition-all
+            className={`text-[14px] font-jost font-normal border w-[58px] h-8 transition-all
               ${
                 selectedSize === s
                   ? "bg-[#222222] text-white border-[#222222]"
@@ -268,9 +268,9 @@ const SidebarContent = ({
         max={937}
         value={priceMax}
         onChange={(e) => setPriceMax(Number(e.target.value))}
-        className="w-full accent-[#222222] mt-[11px] h-[6px]"
+        className="w-full accent-[#222222] mt-[11px] h-1.5"
       />
-      <div className="h-[40px] flex items-center justify-between text-[14px] text-[#767676] font-Jost font-normal">
+      <div className="h-10 flex items-center justify-between text-[14px] text-[#767676] font-Jost font-normal">
         <span>Min Price: $29</span>
         <span>Max Price: ${priceMax}</span>
       </div>
@@ -336,7 +336,7 @@ const ShopPage = () => {
               SHOES
             </h1>
 
-            <nav className="flex flex-wrap justify-center gap-x-4 sm:gap-x-7 relative z-10 pb-[2px]">
+            <nav className="flex flex-wrap justify-center gap-x-4 sm:gap-x-7 relative z-10 pb-0.5">
               {navItems.map((item) => (
                 <span
                   key={item}
@@ -357,7 +357,7 @@ const ShopPage = () => {
       </div>
 
       {/* ── Body ──────────────────────────────────────────────────────────── */}
-      <div className="w-full max-w-[1417px] mx-auto mt-[36px] px-4 sm:px-6 lg:px-8 xl:px-0">
+      <div className="w-full max-w-[1417px] mx-auto mt-9 px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Mobile filter toggle */}
         <div className="flex lg:hidden mb-5">
           <button
@@ -457,7 +457,7 @@ const ShopPage = () => {
             </div>
 
             {/* ── Pagination ─────────────────────────────────────────────── */}
-            <div className="flex items-center justify-between mt-[40px] sm:mt-[50px] mb-[60px] sm:mb-[101px]">
+            <div className="flex items-center justify-between mt-10 sm:mt-[50px] mb-[60px] sm:mb-[101px]">
               <span
                 onClick={() => setActivePage((p) => Math.max(1, p - 1))}
                 className="flex gap-x-2 items-center text-[14px] font-Jost font-medium text-[#222222] cursor-pointer hover:text-[#767676] transition-colors uppercase"
