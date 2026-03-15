@@ -5,12 +5,13 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { RiEqualizerLine } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
+import product from '../../assets/productImage.png'
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const products = [
   {
     id: 1,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Calvin Shorts",
     productPrice: "$62",
@@ -18,14 +19,14 @@ const products = [
   },
   {
     id: 2,
-    productImg: "/src/assets/womenscollection.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Kirby T-Shirt",
     productPrice: "$17",
   },
   {
     id: 3,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Cafeknit Shawl",
     productPrice: "$120",
@@ -34,21 +35,21 @@ const products = [
   },
   {
     id: 4,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Shirt In Botanical Cheetah Print",
     productPrice: "$62",
   },
   {
     id: 5,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Cotton Jersey T-Shirt",
     productPrice: "$17",
   },
   {
     id: 6,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Zara Dresses",
     productPrice: "$120",
@@ -56,21 +57,21 @@ const products = [
   },
   {
     id: 7,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Shirt In Botanical Cheetah Print",
     productPrice: "$62",
   },
   {
     id: 8,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Cotton Jersey T-Shirt",
     productPrice: "$17",
   },
   {
     id: 9,
-    productImg: "/src/assets/images/images_1.png",
+    productImg: product,
     productType: "Dresses",
     productTitle: "Zora Dresses",
     productPrice: "$120",
