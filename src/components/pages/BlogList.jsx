@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "../Container";
 import blog1 from "../../assets/bloglist.png";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Image from "../Image";
 
 const blogData = {
   img: blog1,
@@ -121,7 +122,8 @@ const BlogList = () => {
           {currentCategory.blogs.map((item) => (
             <div key={item.id} className="flex flex-col lg:flex-row gap-[51px] mb-[50px]">
               <div className="w-full lg:w-[690px] shrink-0">
-                <img src={item.img} alt={item.title} className="w-full h-[300px] lg:h-[500px] object-cover" />
+                <Image imgSrc={item.img} className="w-full h-[300px] lg:h-[500px] object-cover" />
+                {/* <img src={item.img} alt={item.title} /> */}
               </div>
               <div className="flex flex-col justify-center">
                 <p className="font-Jost text-[14px] text-[#767676] mb-1">

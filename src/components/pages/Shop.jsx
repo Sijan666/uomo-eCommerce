@@ -127,11 +127,7 @@ const Shop = () => {
                         </button>
 
                         {/* Zoomed Image */}
-                        <img
-                          src={zoomImg}
-                          alt="zoom"
-                          className="max-w-[90%] max-h-[90%] object-contain"
-                        />
+                        <Image imgSrc={zoomImg} className="max-w-[90%] max-h-[90%] object-contain"/>
                       </div>
                     )}
 

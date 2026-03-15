@@ -64,7 +64,7 @@ const Collection = () => {
                       <span className="font-bold font-Jost">E-GIFT</span>{" "}
                       CARDS
                     </h3>
-                    <p className="text-[14px] text-[#222222] pt-2 pb-4">
+                    <p className="text-[14px] text-[#222222] mt-2 mb-4 font-Jost">
                       Surprise someone with the gift they really want.
                     </p>
                     <Button

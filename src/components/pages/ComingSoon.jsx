@@ -12,7 +12,7 @@ const ComingSoon = () => {
       <div className="min-h-screen max-w-[771px] mx-auto md:mx-auto lg:mx-auto flex justify-center bg-cover bg-center bg-no-repeat relative md:px-0 lg:px-0">
         <div className=" lg:h-[407px] w-full mt-[120px] md:mt-40 lg:mt-[212px] absolute">
           {/* Heading */}
-          <h1 className="lg:w-[771px] lg:h-[145px] text-[30px] mb-5 md:mb-0 md:text-[70px] lg:text-[100px]  flex items-center justify-center uppercase text-[#222222] tracking-tighter font-Jost font-bold">
+          <h1 className="lg:w-[771px] lg:h-[145px] text-[30px] mb-5 md:mb-0 md:text-[70px] lg:text-[100px]  flex items-center justify-center uppercase text-[#222222]  font-Jost font-bold">
             Coming Soon
           </h1>
 

@@ -27,7 +27,7 @@ const Cart = () => {
     return (
         <>
         <section id='cart'>
-            <div className="pt-15 pb-25">
+            <div className="pt-[90px] pb-25">
                 <Container>
                     <div className="heading mb-12">
                         <h3 className='text-[35px] font-bold font-Jost text-[#222222]'>CART</h3>

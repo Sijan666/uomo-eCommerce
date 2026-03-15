@@ -39,8 +39,8 @@ const Footer = () => {
               <Image imgSrc={footerLogo} className={'mx-auto md:mx-0'}/>
             </div>
             <div className="mt-[45px] text-[#222] text-[14px] leading-6 mb-6">
-              <p className="mb-1 whitespace-nowrap">1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
-              <p className="mb-1">United States</p>
+              <p className="mb-1 whitespace-nowrap font-Jost">1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
+              <p className="mb-1 font-Jost">United States</p>
             </div>
             <div className="text-[14px] leading-6 mb-8">
               <p className="font-Jost font-medium text-[#222] mb-1">sale@uomo.com</p>

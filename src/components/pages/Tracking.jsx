@@ -10,10 +10,10 @@ const Tracking = () => {
                 <Container>
                     <div className="lg:w-[500px] mx-auto">
                         <div className="heading text-center">
-                            <h3 className='text-[35px] font-bold text-[#222222]'>Order Tracking</h3>
+                            <h3 className='text-[35px] font-bold text-[#222222] uppercase'>Order Tracking</h3>
                             <p className='pt-[42px] pb-5 text-sm text-[#767676]'>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
                         </div>
-                        <div className="inputForm flex flex-col gap-7.5 ">
+                        <div className="inputForm flex flex-col gap-7.5">
                             {/* first name */}
                             <div className="input-container w-full md:w-[500px] mx-auto">
                                 <input type="text" id="myInput" placeholder=" " className="input"/>
