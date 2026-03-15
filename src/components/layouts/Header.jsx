@@ -71,9 +71,6 @@ const Header = () => {
                                         <div className="shop">
                                             <li onClick={handleShop} className="font-Jost font-medium text-[14px] beforeAfterBlack">SHOP</li>
                                             {showShop && (
-                                                <div onClick={()=>setShowShop(false)} className="inset-0 fixed  h-full"></div>
-                                            )}
-                                            {showShop && (
                                             <div className="absolute top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
                                                 <Container>
                                                     <div className="flex justify-between">
