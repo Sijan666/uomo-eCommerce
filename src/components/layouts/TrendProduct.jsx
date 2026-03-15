@@ -30,16 +30,16 @@ const TrendProduct = () => {
                     </div>
                     {/* all buttons */}
                     <div className="mt-[29px]">
-                        <div className="flex flex-col md:flex-row gap-y-6 justify-center gap-x-13">
-                            <button data-filter=".all" className='beforeAfter font-medium text-[10px] md:text-base '>ALL</button>
-                            <button data-filter=".new" className='beforeAfter font-medium text-[10px] md:text-base '>NEWARRIVALS</button>
-                            <button data-filter=".best" className='beforeAfter font-medium text-[10px] md:text-base '>BEST SELLER </button>
-                            <button data-filter=".top" className='beforeAfter font-medium text-[10px] md:text-base '>TOP RATING</button>
+                        <div className="flex flex-wrap justify-center gap-5">
+                            <button data-filter=".all" className='beforeAfter font-medium text-base'>ALL</button>
+                            <button data-filter=".new" className='beforeAfter font-medium text-base'>NEWARRIVALS</button>
+                            <button data-filter=".best" className='beforeAfter font-medium text-base'>BEST SELLER </button>
+                            <button data-filter=".top" className='beforeAfter font-medium text-base'>TOP RATING</button>
                         </div>
                     </div>
                     <div className="mt-[41px]">
                         {/* all products */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7.5" ref={containerRef}>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-7.5" ref={containerRef}>
                             {/* 1st product */}
                             <div className="mix all new">
                                 <ProductforTrendy className={''}
