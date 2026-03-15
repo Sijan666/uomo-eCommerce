@@ -81,12 +81,6 @@ const Header = () => {
                           SHOP
                         </li>
                         {showShop && (
-                          <div
-                            onClick={() => setShowShop(false)}
-                            className="inset-0 fixed  h-full"
-                          ></div>
-                        )}
-                        {showShop && (
                           <div className="absolute top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
                             <Container>
                               <div className="flex justify-between">
@@ -371,7 +365,66 @@ const Header = () => {
                 <div className="icons">
                   <div className="flex gap-x-8 items-center">
                     <IoSearch size={20} className="cursor-pointer" />
-                    <FaRegUser size={20} className="cursor-pointer" />
+                    <div className="">
+                      <FaRegUser size={20} className="cursor-pointer" onClick={() => setShowLogin(!showLogin)}/>
+                      {showLogin && (
+                        <>
+                          <div
+                            onClick={() => setShowLogin(false)}
+                            className="fixed inset-0 bg-black/30 z-999"
+                          />
+                          <div className="fixed top-0 right-0 h-full w-[420px] bg-white px-10 py-[33px] shadow-lg z-1000 overflow-y-auto animate-slideIn">
+                            <div className="flex justify-between items-center mb-[31px]">
+                              <h2 className="font-Jost font-medium text-[16px] text-[#222222] uppercase">
+                                Login
+                              </h2>
+                              <IoMdClose
+                                size={20}
+                                className="cursor-pointer"
+                                onClick={() => setShowLogin(false)}
+                              />
+                            </div>
+                            <form>
+                                <div className="flex flex-col items-center gap-7.5">
+                                    {/* name */}
+                                    <div className="input-container w-full ">
+                                        <input type="text" id="" placeholder=" " className="input"/>
+                                        <label className="label">Username or email address *</label>
+                                    </div>
+                                    {/* pass */}
+                                    <div className="input-container w-full ">
+                                        <input type="password" id="" placeholder=" " className="input"/>
+                                        <label className="label">Password *</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div className="flex justify-between items-center my-7.5">
+                              <div className="flex items-center gap-2">
+                                <input type="checkbox" id="remember" className="w-4 h-4" />
+                                <label
+                                  htmlFor="remember"
+                                  className="font-Jost text-[14px] leading-[26px] text-[#767676]"
+                                >
+                                  Remember me
+                                </label>
+                              </div>
+                              <button className="font-Jost text-[14px] leading-6 text-[#222222] underline cursor-pointer">
+                                Lost password?
+                              </button>
+                            </div>
+                            <button className="w-full cursor-pointer bg-[#222222] text-white font-Jost font-medium text-[14px] py-[18px] hover:bg-[#333333] transition-colors uppercase mb-6">
+                              Log In
+                            </button>
+                            <p className="font-Jost text-[14px] leading-6 text-[#767676] text-center">
+                              No account yet?{" "}
+                              <button className="text-[#222222] underline cursor-pointer">
+                                Create Account
+                              </button>
+                            </p>
+                          </div>
+                        </>
+                      )}
+                    </div>
                     <FaRegHeart size={20} className="cursor-pointer" />
                     <div className="relative">
                       <AiOutlineShopping size={20} className="cursor-pointer" />
@@ -386,7 +439,6 @@ const Header = () => {
                     <HiMiniBars3CenterLeft
                       size={20}
                       className="cursor-pointer"
-                      onClick={() => setShowLogin(!showLogin)}
                     />
                   </div>
                 </div>
@@ -589,65 +641,6 @@ const Header = () => {
           </Container>
         </div>
       </header>
-
-      {showLogin && (
-        <>
-          <div
-            onClick={() => setShowLogin(false)}
-            className="fixed inset-0 bg-black/30 z-[999]"
-          />
-          <div className="fixed top-0 right-0 h-full w-[420px] bg-white px-[40px] py-[33px] px-[40px] shadow-lg z-[1000] overflow-y-auto animate-slideIn">
-            <div className="flex justify-between items-center mb-[31px]">
-              <h2 className="font-Jost font-medium text-[16px] text-[#222222] uppercase">
-                Login
-              </h2>
-              <IoMdClose
-                size={20}
-                className="cursor-pointer"
-                onClick={() => setShowLogin(false)}
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Username or email address *"
-              className="w-full border border-[#E4E4E4] p-4 font-Jost text-[14px] leading-[24px] text-[#767676] outline-[#222222] mb-[30px]"
-            />
-            <div className="relative border border-[#E4E4E4] mb-[17px]">
-              <span className="absolute -top-2.5 left-3 bg-white px-1 font-Jost leading-[24px] text-[14px] text-[#222222]">
-                Password *
-              </span>
-              <input
-                type="password"
-                placeholder="••••••••"
-                className="w-full p-4 font-Jost text-[14px] leading-[24px]  text-[#222222] outline-[#222222]"
-              />
-            </div>
-            <div className="flex justify-between items-center mb-[24px]">
-              <div className="flex items-center gap-2">
-                <input type="checkbox" id="remember" className="w-4 h-4" />
-                <label
-                  htmlFor="remember"
-                  className="font-Jost text-[14px] leading-[26px] text-[#767676]"
-                >
-                  Remember me
-                </label>
-              </div>
-              <button className="font-Jost text-[14px] leading-[24px] text-[#222222] underline cursor-pointer">
-                Lost password?
-              </button>
-            </div>
-            <button className="w-full bg-[#222222] text-white font-Jost font-medium text-[14px] py-[18px] hover:bg-[#333333] transition-colors uppercase mb-[24px]">
-              Log In
-            </button>
-            <p className="font-Jost text-[14px] leading-[24px] text-[#767676] text-center">
-              No account yet?{" "}
-              <button className="text-[#222222] underline cursor-pointer">
-                Create Account
-              </button>
-            </p>
-          </div>
-        </>
-      )}
     </>
   );
 };
