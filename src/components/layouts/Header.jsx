@@ -18,23 +18,39 @@ import { Link } from "react-router-dom";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import dropDownShop from "../../assets/dropDownShop.png";
+import headerCart from '../../assets/headerCart.png'
+import Button from "../Button";
+
+
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const [activeMenu, setActiveMenu] = useState("main");
+  const [showShop, setShowShop] = useState(false);
+  const [showJournal, setShowJournal] = useState(false);
+  const [showPage, setShowPage] = useState(false);
+  const [count , setCount] = useState(0)
+
+  const handleIncrement = ()=>{
+    setCount(count + 1)
+  }
+
+  const handleDecrement = ()=>{
+    if (count > 0) {
+      setCount(count - 1)
+    }
+  }
 
   const handleShow = () => {
     setShow(!show);
   };
 
-  const [activeMenu, setActiveMenu] = useState("main");
-
-  const [showShop, setShowShop] = useState(false);
-
-  const [showJournal, setShowJournal] = useState(false);
-
-  const [showPage, setShowPage] = useState(false);
-
+  const handleCart = () => {
+    setShowCart(!showCart);
+  };
+  
   const handleShop = () => {
     setShowShop(!showShop);
     setShowJournal(false);
@@ -365,6 +381,7 @@ const Header = () => {
                 <div className="icons">
                   <div className="flex gap-x-8 items-center">
                     <IoSearch size={20} className="cursor-pointer" />
+                    {/* login side bar */}
                     <div className="">
                       <FaRegUser size={20} className="cursor-pointer" onClick={() => setShowLogin(!showLogin)}/>
                       {showLogin && (
@@ -426,15 +443,127 @@ const Header = () => {
                       )}
                     </div>
                     <FaRegHeart size={20} className="cursor-pointer" />
-                    <div className="relative">
-                      <AiOutlineShopping size={20} className="cursor-pointer" />
-                      <div className="absolute top-3 left-2 ">
-                        <div className="h-4 w-4 text-center bg-[#B9A16B] rounded-full">
-                          <p className="text-white font-medium font-Jost text-[10px]">
-                            3
-                          </p>
+                    {/* cart side bar */}
+                    <div className="">
+                      <div className="relative cursor-pointer" onClick={handleCart} >
+                        <AiOutlineShopping size={20} className="cursor-pointer" />
+                        <div className="absolute top-3 left-2 ">
+                          <div className="h-4 w-4 text-center bg-[#B9A16B] rounded-full">
+                            <p className="text-white font-medium font-Jost text-[10px]">
+                              3
+                            </p>
+                          </div>
                         </div>
                       </div>
+                      {showCart && (
+                        <>
+                          <div
+                            onClick={() => setShowCart(false)}
+                            className="fixed inset-0 bg-black/30 z-999"
+                          />
+                          <div className="fixed top-0 right-0 h-full w-[420px] bg-[#FAF9F8] px-10 py-[33px] shadow-lg z-1000 overflow-y-auto animate-slideIn">
+                            <div className="flex justify-between items-center mb-14 ">
+                              <h2 className="font-Jost font-medium text-[16px] text-[#222222] uppercase">
+                                SHOPPING BAG ( 1 )
+                              </h2>
+                              <IoMdClose
+                                size={20}
+                                className="cursor-pointer"
+                                onClick={() => setShowCart(false)}
+                              />
+                            </div>
+                            {/* product */}
+                            <div className="flex flex-col gap-y-5 pb-[155px] border-b border-[#E4E4E4]">
+                              {/* first item */}
+                              <div className="pb-5 border-b border-[#E4E4E4]">
+                                <div className="flex justify-between">
+                                  <div className="left">
+                                    <div className="flex gap-x-5">
+                                      <div className="left">
+                                        <Image imgSrc={headerCart}/>
+                                      </div>
+                                      <div className="right">
+                                        <h4 className="text-base font-Jost text-[#222222] pb-05">Zessi Dresses</h4>
+                                        <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                        <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                        <div className="flex gap-x-2.5 items-center mt-2">
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                          <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="right flex flex-col gap-y-[70px]">
+                                    <IoMdClose size={20} className="cursor-pointer"/>
+                                    <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* second item */}
+                              <div className="pb-5 border-b border-[#E4E4E4]">
+                                <div className="flex justify-between">
+                                  <div className="left">
+                                    <div className="flex gap-x-5">
+                                      <div className="left">
+                                        <Image imgSrc={headerCart}/>
+                                      </div>
+                                      <div className="right">
+                                        <h4 className="text-base font-Jost text-[#222222] pb-05">Kirby T-Shirt</h4>
+                                        <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                        <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                        <div className="flex gap-x-2.5 items-center mt-2">
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                          <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="right flex flex-col gap-y-[70px]">
+                                    <IoMdClose size={20} className="cursor-pointer"/>
+                                    <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* third item */}
+                              <div className="pb-5 border-b border-[#E4E4E4]">
+                                <div className="flex justify-between">
+                                  <div className="left">
+                                    <div className="flex gap-x-5">
+                                      <div className="left">
+                                        <Image imgSrc={headerCart}/>
+                                      </div>
+                                      <div className="right">
+                                        <h4 className="text-base font-Jost text-[#222222] pb-05">Cableknit Shawl</h4>
+                                        <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                        <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                        <div className="flex gap-x-2.5 items-center mt-2">
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                          <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                          <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="right flex flex-col gap-y-[70px]">
+                                    <IoMdClose size={20} className="cursor-pointer"/>
+                                    <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="mt-4 flex flex-col gap-y-5">
+                              <div className="flex justify-between">
+                                <h4 className="text-sm font-Jost font-medium text-[#222222]">SUBTOTAL:</h4>
+                                <h4 className="text-sm font-Jost font-medium text-[#222222]">$176.00</h4>
+                              </div>
+                              <Button btnText={'View Cart'} className={'uppercase text-sm font-Jost font-medium hover:text-[#222222] text-white bg-[#222222] hover:bg-[#E4E4E4] pt-[22px] pb-3.5'}/>
+                              <Button btnText={'Checkout'} className={'uppercase text-sm font-Jost font-medium hover:text-[#222222] text-white bg-[#222222] hover:bg-[#E4E4E4] pt-[22px] pb-3.5'}/>
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                     <HiMiniBars3CenterLeft
                       size={20}
