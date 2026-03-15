@@ -596,7 +596,7 @@ const Header = () => {
             onClick={() => setShowLogin(false)}
             className="fixed inset-0 bg-black/30 z-[999]"
           />
-          <div className="fixed top-0 right-0 h-full w-[420px] bg-white px-[40px] py-[33px] px-[40px] shadow-lg z-[1000] overflow-y-auto">
+          <div className="fixed top-0 right-0 h-full w-[420px] bg-white px-[40px] py-[33px] px-[40px] shadow-lg z-[1000] overflow-y-auto animate-slideIn">
             <div className="flex justify-between items-center mb-[31px]">
               <h2 className="font-Jost font-medium text-[16px] text-[#222222] uppercase">
                 Login
