@@ -2,40 +2,39 @@ import React from "react";
 import ProductforTrendy from "/src/components/ProductforTrendy";
 import Container from "../Container";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
+import product from '../../assets/productImage.png'
 
 const LimitedEdition = () => {
 
   const products = [
     {
       id: 1,
-      img: "/src/assets/productImage.png",
+      img: product,
       type: "Dresses",
       title: "Hub Accent Mirror",
       price: "$29",
     },
     {
       id: 2,
-      img: "/src/assets/productImage.png",
+      img: product,
       type: "Dresses",
       title: "Hosking Blue Area Rug",
       price: "$62",
     },
     {
       id: 3,
-      img: "/src/assets/productImage.png",
+      img: product,
       type: "Dresses",
       title: "Hanneman Pouf",
       price: "$17",
     },
     {
       id: 4,
-      img: "/src/assets/productImage.png",
+      img: product,
       type: "Dresses",
       title: "Cushion Flot Slipcover",
       price: "$129",
@@ -43,7 +42,7 @@ const LimitedEdition = () => {
     },
     {
       id: 5,
-      img: "/src/assets/productImage.png",
+      img: product,
       type: "Dresses",
       title: "Cushion Flot Slipcover",
       price: "$129",
