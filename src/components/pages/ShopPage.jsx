@@ -305,7 +305,7 @@ const ShopPage = () => {
   // but cap at 2 cols on tablet and 1 col on mobile.
   const gridCols =
     viewMode === 2
-      ? "grid-cols-1 sm:grid-cols-2"
+      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       : viewMode === 4
         ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
         : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
