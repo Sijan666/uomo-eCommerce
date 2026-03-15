@@ -9,6 +9,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"
 import { IoIosArrowDown, IoMdClose } from "react-icons/io"
+import dropDownShop from '../../assets/dropDownShop.png'
 
 const Header = () => {
     const [show , setShow] = useState(false)
@@ -18,6 +19,30 @@ const Header = () => {
     }
 
     const [activeMenu, setActiveMenu] = useState("main");
+
+    const [showShop , setShowShop] = useState(false)
+
+
+    const [showJournal , setShowJournal] = useState(false)
+
+    const [showPage , setShowPage] = useState(false)
+
+    const handleShop = ()=>{
+        setShowShop(!showShop)
+        setShowJournal(false)
+    }
+
+    const handleJournal = ()=>{
+        setShowJournal(!showJournal)
+        setShowShop(false)
+    }
+
+        const handlePage = ()=>{
+        setShowPage(!showPage)
+        setShowShop(false)
+        setShowJournal(false)
+    }
+    
 
     return (
         <>
@@ -43,19 +68,151 @@ const Header = () => {
                                                 HOME
                                             </Link>
                                         </li>
-                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">
-                                            <Link to={'/shop'}>
-                                                SHOP
-                                            </Link>
-                                        </li>
+                                        <div className="shop">
+                                            <li onClick={handleShop} className="font-Jost font-medium text-[14px] beforeAfterBlack">SHOP</li>
+                                            {showShop && (
+                                                <div onClick={()=>setShowShop(false)} className="inset-0 fixed  h-full"></div>
+                                            )}
+                                            {showShop && (
+                                            <div className="absolute top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
+                                                <Container>
+                                                    <div className="flex justify-between">
+                                                        <div className="shopandpages">
+                                                            <div className="shop">
+                                                                <h4 className="text-sm font-Jost font-medium text-[#767676]">SHOP PAGES</h4>
+                                                                <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Default</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Topbar</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Collapse</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Simple</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Masonry</button>
+                                                                </div>
+                                                            </div>
+                                                            <div className="page mt-7.5">
+                                                                <h4 className="text-sm font-Jost font-medium text-[#767676]">SHOP PAGES</h4>
+                                                                <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Default</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Topbar</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Collapse</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Simple</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Masonry</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="product">
+                                                            <h4 className="text-sm font-Jost font-medium text-[#767676]">OTHER PAGES</h4>
+                                                            <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Collection</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">LookBook</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Categories Page</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Shopping Cart</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Wishlist</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Order Tracking</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Checkout</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Checkout – 2 Columns</button>
+                                                            </div>
+                                                        </div>
+                                                        <div className="elements">
+                                                            <h4 className="text-sm font-Jost font-medium text-[#767676]">ELEMENTS</h4>
+                                                            <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Accordion</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Pricing Table</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Google Maps</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Message Box</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Progress Bars</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Charts</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Icon Box</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Product Tabs</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Products Grid</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Tabs</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Video Players</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Team</button>
+                                                            </div>
+                                                        </div>
+                                                        <div className="elements">
+                                                            <h4 className="text-sm font-Jost font-medium text-[#767676] opacity-0">ELEMENTS</h4>
+                                                            <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Buttons</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Testimonials</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Social Icons</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Blog Posts</button>
+                                                            </div>
+                                                        </div>
+                                                        <div className="">
+                                                            <Image imgSrc={dropDownShop}/>
+                                                        </div>
+                                                    </div>
+                                                </Container>
+                                            </div>
+                                            )}
+                                        </div>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack">COLLECTION</li>
-                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">JOURNAL</li>
+                                        <div className="journal">
+                                            <li onClick={handleJournal} className="font-Jost font-medium text-[14px] beforeAfterBlack">JOURNAL</li>
+                                            {showJournal && (
+                                            <div className="absolute top-19 left-1/2 -translate-x-1/2 p-10  w-[795px] bg-white z-99 border-t border-b border-[#E4E4E4]">
+                                                {/* <Container> */}
+                                                    <div className="flex justify-between">
+                                                        <div className="blgstyle">
+                                                            <div className="blgstyle">
+                                                                <h4 className="text-sm font-Jost font-medium text-[#767676]">BLOG STYLES</h4>
+                                                                <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Alternative</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Small images</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Blog chess</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Masonry grid</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Infinit scrollingFEATURE</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">With background</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Blog flat</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Default flat</button>
+                                                                    <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Blog mask</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="product">
+                                                            <h4 className="text-sm font-Jost font-medium text-[#767676]">SINGLE POST</h4>
+                                                            <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Standard Post</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Image Post</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Video Post</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Audio Post</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Gallery Post</button>
+                                                            </div>
+                                                        </div>
+                                                        <div className="elements">
+                                                            <h4 className="text-sm font-Jost font-medium text-[#767676]">NAVIGATION</h4>
+                                                            <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Simple</button>
+                                                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Image Background</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {/* </Container> */}
+                                            </div>
+                                            )}
+                                        </div>
                                         <li className="font-Jost font-medium text-[14px] beforeAfterBlack">
                                             <Link to={'/lookbook'}>
                                                 LOOKBOOK
                                             </Link>
                                         </li>
-                                        <li className="font-Jost font-medium text-[14px] beforeAfterBlack">PAGES</li>
+                                        <div className="pages">
+                                            <li onClick={handlePage} className="font-Jost font-medium text-[14px] beforeAfterBlack relative">PAGES</li>
+                                            {showPage && (
+                                            <div className="absolute top-19 left-1/2 -translate-x-1/2 p-10  w-[260px] bg-white z-99 border-t border-b border-[#E4E4E4]">
+                                                <div className="product">
+                                                    <div className="flex flex-col gap-y-5 items-start mt-3">
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">About</button>
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Contact Us</button>
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Store Locator</button>
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">FAQ</button>
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">Coming Soon</button>
+                                                        <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">404</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            )}
+                                        </div>
                                     </ul>
                                 </nav>
                             </div>
