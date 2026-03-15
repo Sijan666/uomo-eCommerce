@@ -58,9 +58,9 @@ const Header = () => {
           <Container>
             {/* large device header */}
             <div className="hidden md:block ">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col lg:flex-row gap-y-5 lg:justify-between items-center">
                 {/* right side */}
-                <div className="logoandNav flex gap-x-14 items-center">
+                <div className="logoandNav flex flex-col lg:flex-row gap-y-5 lg:gap-x-14 items-center">
                   {/* logo */}
                   <div className="logo">
                     <Link to={"/"}>
@@ -81,12 +81,12 @@ const Header = () => {
                           SHOP
                         </li>
                         {showShop && (
-                          <div className="absolute top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
+                          <div className="absolute md:top-30 lg:top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
                             <Container>
-                              <div className="flex justify-between">
+                              <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-10">
                                 <div className="shopandpages">
                                   <div className="shop">
-                                    <h4 className="text-sm font-Jost font-medium text-[#767676]">
+                                    <h4 className="text-sm font-Jost font-medium text-[#767676] pb-3">
                                       SHOP PAGES
                                     </h4>
                                     <div className="flex flex-col gap-y-5 items-start mt-3">
@@ -108,30 +108,30 @@ const Header = () => {
                                     </div>
                                   </div>
                                   <div className="page mt-7.5">
-                                    <h4 className="text-sm font-Jost font-medium text-[#767676]">
-                                      SHOP PAGES
+                                    <h4 className="text-sm font-Jost font-medium text-[#767676] pb-3">
+                                      PRODCUT PAGES
                                     </h4>
                                     <div className="flex flex-col gap-y-5 items-start mt-3">
                                       <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
                                         Default
                                       </button>
                                       <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                        Topbar
+                                        Images Left
                                       </button>
                                       <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                        Collapse
+                                        Image Grid
                                       </button>
                                       <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                        Simple
+                                        Image Slider
                                       </button>
                                       <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                        Masonry
+                                        Images Stacked
                                       </button>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="product">
-                                  <h4 className="text-sm font-Jost font-medium text-[#767676]">
+                                  <h4 className="text-sm font-Jost font-medium text-[#767676] pb-3">
                                     OTHER PAGES
                                   </h4>
                                   <div className="flex flex-col gap-y-5 items-start mt-3">
@@ -162,7 +162,7 @@ const Header = () => {
                                   </div>
                                 </div>
                                 <div className="elements">
-                                  <h4 className="text-sm font-Jost font-medium text-[#767676]">
+                                  <h4 className="text-sm font-Jost font-medium text-[#767676] pb-3">
                                     ELEMENTS
                                   </h4>
                                   <div className="flex flex-col gap-y-5 items-start mt-3">
@@ -224,7 +224,7 @@ const Header = () => {
                                   </div>
                                 </div>
                                 <div className="">
-                                  <Image imgSrc={dropDownShop} />
+                                  <Image imgSrc={dropDownShop} className={'w-full'}/>
                                 </div>
                               </div>
                             </Container>
@@ -242,9 +242,9 @@ const Header = () => {
                           JOURNAL
                         </li>
                         {showJournal && (
-                          <div className="absolute top-19 left-1/2 -translate-x-1/2 p-10  w-[795px] bg-white z-99 border-t border-b border-[#E4E4E4]">
+                          <div className="absolute md:top-30 lg:top-19 left-1/2 -translate-x-1/2 p-10  w-[795px] bg-white z-99 border-t border-b border-[#E4E4E4]">
                             {/* <Container> */}
-                            <div className="flex justify-between">
+                            <div className="grid grid-cols-3 gap-10">
                               <div className="blgstyle">
                                 <div className="blgstyle">
                                   <h4 className="text-sm font-Jost font-medium text-[#767676]">
@@ -332,7 +332,7 @@ const Header = () => {
                           PAGES
                         </li>
                         {showPage && (
-                          <div className="absolute top-19 left-1/2 -translate-x-1/2 p-10  w-[260px] bg-white z-99 border-t border-b border-[#E4E4E4]">
+                          <div className="absolute md:top-30 lg:top-19 left-1/2 -translate-x-1/2 p-10  w-[260px] bg-white z-99 border-t border-b border-[#E4E4E4]">
                             <div className="product">
                               <div className="flex flex-col gap-y-5 items-start mt-3">
                                 <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
