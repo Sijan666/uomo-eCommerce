@@ -31,6 +31,7 @@ const Header = () => {
   const [showShop, setShowShop] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
   const [showPage, setShowPage] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const [count , setCount] = useState(0)
 
   const handleIncrement = ()=>{
@@ -65,6 +66,13 @@ const Header = () => {
     setShowPage(!showPage);
     setShowShop(false);
     setShowJournal(false);
+  };
+
+  const handleSearch = () => {
+    setShowSearch(!showSearch);
+    setShowShop(false);
+    setShowJournal(false);
+    setShowPage(false);
   };
 
   return (
@@ -380,9 +388,37 @@ const Header = () => {
                 {/* right side */}
                 <div className="icons">
                   <div className="flex gap-x-8 items-center">
-                    <IoSearch size={20} className="cursor-pointer" />
+                    {/* search bar */}
+                    <div className="search">
+                      <IoSearch onClick={handleSearch} size={20} className="cursor-pointer" />
+                        {showSearch && (
+                          <div className="absolute md:top-30 lg:top-19 left-0 p-10 w-full bg-white z-99 border-t border-b border-[#E4E4E4]">
+                            <Container>
+                              <div className="my-15">
+                                <h4 className="text-sm font-medium font-Jost text-[#767676]">WHAT ARE YOU LOOKING FOR?</h4>
+                                <div className="pt-7.5 flex justify-between items-center">
+                                  <input type="text" placeholder="SEARCH PRODUCTS" className="py-2.5 border-b-2 border-[#767676] outline-none w-full text-sm font-medium font-Jost text-[#767676]"/>
+                                  <div className="relative ">
+                                    <IoSearch onClick={handleSearch} size={20} className="cursor-pointer absolute -top-1.5 right-0" />
+                                  </div>
+                                </div>
+                                <div className="pt-7.5 flex flex-col gap-[9px]">
+                                  <h4 className="text-sm font-medium font-Jost text-[#767676]">QUICKLINKS</h4>
+                                  <ul className="flex flex-col gap-[9px] text-sm text-[#222222] font-Jost">
+                                    <li className="leading-[35px] cursor-pointer">New Arrivals</li>
+                                    <li className="leading-[35px] cursor-pointer">Dresses</li>
+                                    <li className="leading-[35px] cursor-pointer">Accessories</li>
+                                    <li className="leading-[35px] cursor-pointer">Footwear</li>
+                                    <li className="leading-[35px] cursor-pointer">Sweatshirt</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </Container>
+                          </div>
+                        )}
+                    </div>
                     {/* login side bar */}
-                    <div className="">
+                    <div className="login">
                       <FaRegUser size={20} className="cursor-pointer" onClick={() => setShowLogin(!showLogin)}/>
                       {showLogin && (
                         <>
@@ -444,7 +480,7 @@ const Header = () => {
                     </div>
                     <FaRegHeart size={20} className="cursor-pointer" />
                     {/* cart side bar */}
-                    <div className="">
+                    <div className="cart">
                       <div className="relative cursor-pointer" onClick={handleCart} >
                         <AiOutlineShopping size={20} className="cursor-pointer" />
                         <div className="absolute top-3 left-2 ">
