@@ -1,29 +1,32 @@
+import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home";
-import RootLayouts from "./components/layouts/RootLayouts";
-import Error from "./components/pages/Error";
-import Blog from "./components/pages/Blog";
-import Shop from "./components/pages/Shop";
-import ContactUs from "./components/pages/ContactUs";
-import About from "./components/pages/About";
-import Lookbook from "./components/pages/Lookbook";
-import Locator from "./components/pages/Locator";
-import TermsAndCondition from "./components/pages/TermsAndCondition";
-import BlogList from "./components/pages/BlogList";
-import ComingSoon from "./components/pages/ComingSoon";
-import Cart from "./components/pages/Cart";
-import Shipping from "./components/pages/Shipping";
-import ReceivedOrder from "./components/pages/ReceivedOrder";
-import Login from "./components/pages/Login";
-import Register from "./components/pages/Register";
-import Tracking from "./components/pages/Tracking";
-import Dashboard from "./components/pages/Dashboard";
-import ShopPage from "./components/pages/ShopPage";
 
+import RootLayouts from "./components/layouts/RootLayouts";
+import Loader from "./components/Loader";
+
+const Home = lazy(() => import("./components/pages/Home"));
+const Error = lazy(() => import("./components/pages/Error"));
+const Blog = lazy(() => import("./components/pages/Blog"));
+const Shop = lazy(() => import("./components/pages/Shop"));
+const ContactUs = lazy(() => import("./components/pages/ContactUs"));
+const About = lazy(() => import("./components/pages/About"));
+const Lookbook = lazy(() => import("./components/pages/Lookbook"));
+const Locator = lazy(() => import("./components/pages/Locator"));
+const TermsAndCondition = lazy(() => import("./components/pages/TermsAndCondition"));
+const BlogList = lazy(() => import("./components/pages/BlogList"));
+const ComingSoon = lazy(() => import("./components/pages/ComingSoon"));
+const Cart = lazy(() => import("./components/pages/Cart"));
+const Shipping = lazy(() => import("./components/pages/Shipping"));
+const ReceivedOrder = lazy(() => import("./components/pages/ReceivedOrder"));
+const Login = lazy(() => import("./components/pages/Login"));
+const Register = lazy(() => import("./components/pages/Register"));
+const Tracking = lazy(() => import("./components/pages/Tracking"));
+const Dashboard = lazy(() => import("./components/pages/Dashboard"));
+const ShopPage = lazy(() => import("./components/pages/ShopPage"));
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<RootLayouts />}>
           <Route index element={<Home />} />
@@ -39,16 +42,15 @@ function App() {
           <Route path="/comingSoon" element={<ComingSoon />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/shipping" element={<Shipping />} />
-          <Route path="/receivedOrder" element={<ReceivedOrder/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} />
-          <Route path="/tracking" element={<Tracking/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/shopList" element={<ShopPage/>} />
+          <Route path="/receivedOrder" element={<ReceivedOrder />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/tracking" element={<Tracking />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
-    </>
+    </Suspense>
   );
 }
 
