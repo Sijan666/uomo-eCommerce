@@ -9,6 +9,8 @@ import LimitedEdition from "../layouts/LimitedEdition"
 import Promotionalbanner from "../layouts/Promotionalbanner"
 import Spring from "../layouts/Spring"
 import TrendProduct from "../layouts/TrendProduct"
+import NewsletterModal from '../NewsletterModal';
+import CookieConsent from '../CookieConsent';
 
 const Home = () => {
     return (
@@ -25,6 +27,8 @@ const Home = () => {
         <LimitedEdition/>
         <Ads/>
         <FooterTop/>
+        <NewsletterModal/>
+        <CookieConsent/>
         </>
     )
 }

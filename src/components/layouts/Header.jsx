@@ -60,6 +60,7 @@ const Header = () => {
   const handleJournal = () => {
     setShowJournal(!showJournal);
     setShowShop(false);
+    setShowPage(false);
   };
 
   const handlePage = () => {
@@ -356,27 +357,62 @@ const Header = () => {
                           PAGES
                         </li>
                         {showPage && (
-                          <div className="absolute md:top-30 lg:top-19 left-1/2 -translate-x-1/2 p-10  w-[260px] bg-white z-99 border-t border-b border-[#E4E4E4]">
+                          <div className="absolute md:top-30 lg:top-19 left-1/2 -translate-x-1/2 p-10 w-[420px] bg-white z-99 border-t border-b border-[#E4E4E4] shadow-md">
                             <div className="product">
-                              <div className="flex flex-col gap-y-5 items-start mt-3">
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                  About
-                                </button>
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
+                              <div className="grid grid-cols-2 gap-x-10 gap-y-4 mt-3">
+                                
+                                <Link to={'/blog'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Blog
+                                </Link>
+                                <Link to={'/shop'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Shop
+                                </Link>
+                                <Link to={'/contact'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
                                   Contact Us
-                                </button>
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                  Store Locator
-                                </button>
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                  FAQ
-                                </button>
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
+                                </Link>
+                                <Link to={'/about'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  About
+                                </Link>
+                                <Link to={'/lookbook'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Lookbook
+                                </Link>
+                                <Link to={'/shopList'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Shop Page
+                                </Link>
+                                <Link to={'/locator'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Locator
+                                </Link>
+                                <Link to={'/terms'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Terms & Conditions
+                                </Link>
+                                <Link to={'/blogList'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Blog List
+                                </Link>
+                                <Link to={'/comingSoon'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
                                   Coming Soon
-                                </button>
-                                <button className="text-sm text-[#222222] cursor-pointer beforeAfterBlack">
-                                  404
-                                </button>
+                                </Link>
+                                <Link to={'/cart'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Cart
+                                </Link>
+                                <Link to={'/shipping'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Shipping
+                                </Link>
+                                <Link to={'/receivedOrder'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Received Order
+                                </Link>
+                                <Link to={'/login'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Login
+                                </Link>
+                                <Link to={'/register'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Register
+                                </Link>
+                                <Link to={'/tracking'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Tracking
+                                </Link>
+                                <Link to={'/dashboard'} className="text-sm tracking-wide text-[#222222] font-Jost hover:text-gray-500 transition-colors text-left uppercase beforeAfterBlack">
+                                  Dashboard
+                                </Link>
+
                               </div>
                             </div>
                           </div>
