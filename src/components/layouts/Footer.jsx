@@ -34,9 +34,9 @@ const Footer = () => {
       <Container className="pt-[100px] ">
         <div className="flex flex-col gap-y-10 lg:flex-row lg:justify-between">
           {/* 1st */}
-          <div className="h-[255.26px] text-center md:text-left">
+          <div className="h-[255.26px] ">
             <div className="mb-8">
-              <Image imgSrc={footerLogo} className={'mx-auto md:mx-0'}/>
+              <Image imgSrc={footerLogo} className={''}/>
             </div>
             <div className="mt-[45px] text-[#222] text-[14px] leading-6 mb-6">
               <p className="mb-1 whitespace-nowrap font-Jost">1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
@@ -46,14 +46,14 @@ const Footer = () => {
               <p className="font-Jost font-medium text-[#222] mb-1">sale@uomo.com</p>
               <p className="font-Jost font-medium text-[#222]">+1 246-345-0695</p>
             </div>
-            <div className="flex justify-center md:gap-9 gap-5 mx-auto md:mx-0 md:w-[205px] mt-[47px]">
+            <div className="flex md:gap-9 gap-5 mx-auto md:mx-0 md:w-[205px] mt-[47px]">
               {socialIcons.map((item, idx) => (
                 <a key={idx} className={`text-[${item.color}] cursor-pointer`}>{item.icon}</a>
               ))}
             </div>
           </div>
           {/* 2nd */}
-          <div className="grid md:grid-cols-3 grid-cols-1 text-center md:text-left md:w-[586px] gap-6 ">
+          <div className="grid md:grid-cols-3 grid-cols-2 md:text-left md:w-[586px] gap-6 ">
             {footerColumns.map((col, i) => (
               <div key={i}>
                 <h2 className="font-Jost font-medium text-[#222222] text-[18px] mb-4">{col.title}</h2>
@@ -61,7 +61,7 @@ const Footer = () => {
                   {col.links.map((link, idx) => (
                     <li key={idx}>
                       <div className="group inline-flex flex-col items-center cursor-pointer">
-                        <a className="text-[#222222] font-normal text-[14px] leading-10">{link}</a>
+                        <a className="text-[#222222] font-normal text-[14px] leading-10 font-Jost">{link}</a>
                         <div className="w-full h-[3px] bg-[#222222] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                       </div>
                     </li>
@@ -98,11 +98,11 @@ const Footer = () => {
         </div>
         {/* border */}
         <div className="w-full h-px mt-[88px] bg-[#CFCDCD]"></div>
-        <div className="flex flex-col lg:flex-row gap-y-5 justify-between items-center py-6 mt-[34px]">
+        <div className="flex flex-col lg:flex-row gap-y-5 justify-between  py-6 mt-[34px]">
           <p className="font-Jost text-[#222] text-[14px] leading-6  whitespace-nowrap">
             ©2020 Uomo
           </p>
-          <div className="flex flex-col lg:flex-row  items-center gap-4 md:gap-6">
+          <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
             <div className="flex items-center gap-2 cursor-pointer">
               <span className="font-Jost text-[#767676] text-[14px] leading-6 mr-2">Language</span>
               <div className="flex items-center gap-1 cursor-pointer">
