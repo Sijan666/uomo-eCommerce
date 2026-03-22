@@ -5,6 +5,7 @@ import womenscollection from "../../assets/womenscollection.png"
 import mensss from "../../assets/mensss.png"
 import kidscollection from "../../assets/kidscollection.png"
 import giftcard from "../../assets/giftcard.png"
+import { Link } from "react-router-dom";
 
 
 
@@ -24,7 +25,9 @@ const Collection = () => {
                   <span className="font-bold font-Jost">WOMEN </span>
                   COLLECTION
                 </h3>
-                <Button className={"text-[14px] font-medium beforeAfterBlack"} btnText={"SHOP NOW"} />
+                <Link to={'/shopList'}>
+                  <Button className={"text-[14px] font-medium beforeAfterBlack"} btnText={"SHOP NOW"} />
+                </Link>
               </div>
             </div>
             <div className="md:flex-wrap flex flex-col ">
@@ -36,10 +39,12 @@ const Collection = () => {
                     <span className="font-bold font-Jost">MEN</span>{" "}
                     COLLECTION
                   </h3>
-                  <Button
-                    className={"text-[14px] font-medium beforeAfterBlack"}
-                    btnText={"SHOP NOW"}
-                  />
+                  <Link to={'/shopList'}>
+                    <Button
+                      className={"text-[14px] font-medium beforeAfterBlack"}
+                      btnText={"SHOP NOW"}
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row mt-7.5 gap-7.5">
@@ -51,10 +56,12 @@ const Collection = () => {
                       <span className="font-bold font-Jost">KIDS</span>{" "}
                       COLLECTION
                     </h3>
-                    <Button
-                      className={"text-[14px] font-medium beforeAfterBlack"}
-                      btnText={"SHOP NOW"}
-                    />
+                    <Link to={'/shopList'}>
+                      <Button
+                        className={"text-[14px] font-medium beforeAfterBlack"}
+                        btnText={"SHOP NOW"}
+                      />
+                    </Link>
                   </div>
                 </div>
                 <div className="relative group overflow-hidden">
@@ -67,10 +74,12 @@ const Collection = () => {
                     <p className="text-[14px] text-[#222222] mt-2 mb-4 font-Jost">
                       Surprise someone with the gift they really want.
                     </p>
-                    <Button
-                      className={"text-[14px] font-medium beforeAfterBlack"}
-                      btnText={"DISCOVER MORE"}
-                    />
+                    <Link to={'/shopList'}>
+                      <Button
+                        className={"text-[14px] font-medium beforeAfterBlack"}
+                        btnText={"DISCOVER MORE"}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
