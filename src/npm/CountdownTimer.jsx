@@ -2,7 +2,7 @@ import React from 'react';
 import Countdown from 'react-countdown';
 
 
-const targetDate = new Date('2026-03-20T23:59:59').getTime();
+const targetDate = new Date('2027-03-20T23:59:59').getTime();
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
