@@ -1,5 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+import { ReactLenis } from "lenis/react";
+import "lenis/dist/lenis.css";
+
 import RootLayouts from "./components/layouts/RootLayouts";
 import Loader from "./components/Loader";
 
@@ -25,31 +28,33 @@ const ShopPage = lazy(() => import("./components/pages/ShopPage"));
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route path="/" element={<RootLayouts />}>
-          <Route index element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/lookbook" element={<Lookbook />} />
-          <Route path="/shopList" element={<ShopPage />} />
-          <Route path="/locator" element={<Locator />} />
-          <Route path="/terms" element={<TermsAndCondition />} />
-          <Route path="/blogList" element={<BlogList />} />
-          <Route path="/comingSoon" element={<ComingSoon />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/shipping" element={<Shipping />} />
-          <Route path="/receivedOrder" element={<ReceivedOrder />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/tracking" element={<Tracking />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Route>
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </Suspense>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<RootLayouts />}>
+            <Route index element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/lookbook" element={<Lookbook />} />
+            <Route path="/shopList" element={<ShopPage />} />
+            <Route path="/locator" element={<Locator />} />
+            <Route path="/terms" element={<TermsAndCondition />} />
+            <Route path="/blogList" element={<BlogList />} />
+            <Route path="/comingSoon" element={<ComingSoon />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/receivedOrder" element={<ReceivedOrder />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/tracking" element={<Tracking />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Suspense>
+    </ReactLenis>
   );
 }
 
