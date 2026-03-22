@@ -666,7 +666,6 @@ const Header = () => {
                         className="cursor-pointer"
                       />
                     )}
-
                     <nav
                       className={`absolute top-12 left-0 w-full min-h-screen z-50 py-5 bg-white origin-top transition-all duration-300 ease-in-out ${show ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-5 pointer-events-none"} px-3.5`}
                     >
@@ -783,7 +782,6 @@ const Header = () => {
                           <FaRegUser size={16} /> MY ACCOUNT
                         </button>
                       </div>
-
                       <div className="mt-5 flex gap-x-[27px] items-center">
                         <p className="text-sm font-Jost text-[#767676]">
                           Language
@@ -795,7 +793,6 @@ const Header = () => {
                           <IoIosArrowDown size={14} />
                         </div>
                       </div>
-
                       <div className="mt-4 flex gap-x-[31px] items-center">
                         <p className="text-sm font-Jost text-[#767676]">
                           Currency
@@ -807,7 +804,6 @@ const Header = () => {
                           <IoIosArrowDown size={14} />
                         </div>
                       </div>
-
                       <div className="mt-8 flex items-center gap-x-8 text-[#222222]">
                         <FaFacebookF size={15} className="cursor-pointer" />
                         <FaTwitter size={15} className="cursor-pointer" />
@@ -817,17 +813,15 @@ const Header = () => {
                       </div>
                     </nav>
                   </div>
-
                   {/* logo */}
                   <div className="logo">
                     <Link to={"/"}>
                       <Image imgSrc={logo} />
                     </Link>
                   </div>
-
                   {/* Cart Icon */}
                   <div className="relative">
-                    <AiOutlineShopping size={24} className="cursor-pointer" />
+                    <AiOutlineShopping onClick={handleCart} size={24} className="cursor-pointer" />
                     <div className="absolute -top-1 -right-2 ">
                       <div className="h-4 w-4 flex justify-center items-center bg-[#B9A16B] rounded-full">
                         <p className="text-white font-medium font-Jost text-[10px]">
@@ -835,6 +829,125 @@ const Header = () => {
                         </p>
                       </div>
                     </div>
+                    {showCart && (
+                      <>
+                        {/* Overlay */}
+                        <div
+                          onClick={() => setShowCart(false)}
+                          className="fixed inset-0 bg-black/30 z-999"
+                        />
+                        <div className="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#FAF9F8] px-5 sm:px-10 py-6 sm:py-[33px] shadow-lg z-1000 overflow-y-auto animate-slideIn">
+                          {/* Header */}
+                          <div className="flex justify-between items-center mb-8 sm:mb-14">
+                            <h2 className="font-Jost font-medium text-[16px] text-[#222222] uppercase">
+                              SHOPPING BAG ( 1 )
+                            </h2>
+                            <IoMdClose
+                              size={20}
+                              className="cursor-pointer"
+                              onClick={() => setShowCart(false)}
+                            />
+                          </div>
+                          {/* Product List */}
+                          <div className="flex flex-col gap-y-5 pb-[100px] sm:pb-[155px] border-b border-[#E4E4E4]">
+                            {/* First item */}
+                            <div className="pb-5 border-b border-[#E4E4E4]">
+                              <div className="flex justify-between">
+                                <div className="left flex-1">
+                                  <div className="flex gap-x-3 sm:gap-x-5">
+                                    <div className="left shrink-0">
+                                      <Image imgSrc={headerCart} />
+                                    </div>
+                                    <div className="right">
+                                      <h4 className="text-base font-Jost text-[#222222] pb-0.5">Zessi Dresses</h4>
+                                      <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                      <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                      <div className="flex gap-x-2.5 items-center mt-2">
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                        <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="right flex flex-col justify-between items-end gap-y-8 sm:gap-y-[70px] pl-2">
+                                  <IoMdClose size={20} className="cursor-pointer" />
+                                  <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Second item */}
+                            <div className="pb-5 border-b border-[#E4E4E4]">
+                              <div className="flex justify-between">
+                                <div className="left flex-1">
+                                  <div className="flex gap-x-3 sm:gap-x-5">
+                                    <div className="left shrink-0">
+                                      <Image imgSrc={headerCart} />
+                                    </div>
+                                    <div className="right">
+                                      <h4 className="text-base font-Jost text-[#222222] pb-0.5">Kirby T-Shirt</h4>
+                                      <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                      <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                      <div className="flex gap-x-2.5 items-center mt-2">
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                        <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="right flex flex-col justify-between items-end gap-y-8 sm:gap-y-[70px] pl-2">
+                                  <IoMdClose size={20} className="cursor-pointer" />
+                                  <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Third item */}
+                            <div className="pb-5 border-b border-[#E4E4E4]">
+                              <div className="flex justify-between">
+                                <div className="left flex-1">
+                                  <div className="flex gap-x-3 sm:gap-x-5">
+                                    <div className="left shrink-0">
+                                      <Image imgSrc={headerCart} />
+                                    </div>
+                                    <div className="right">
+                                      <h4 className="text-base font-Jost text-[#222222] pb-0.5">Cableknit Shawl</h4>
+                                      <p className="text-sm font-Jost text-[#767676]">Color:  Yellow</p>
+                                      <p className="text-sm font-Jost text-[#767676]">Size: L</p>
+                                      <div className="flex gap-x-2.5 items-center mt-2">
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleDecrement}>-</button>
+                                        <p className="text-sm font-Jost text-[#767676]">{count}</p>
+                                        <button className="text-sm font-Jost text-[#767676] cursor-pointer" onClick={handleIncrement}>+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="right flex flex-col justify-between items-end gap-y-8 sm:gap-y-[70px] pl-2">
+                                  <IoMdClose size={20} className="cursor-pointer" />
+                                  <h4 className="text-[18px] font-Jost text-[#222222]">$99</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Footer / Subtotal */}
+                          <div className="mt-4 flex flex-col gap-y-5">
+                            <div className="flex justify-between">
+                              <h4 className="text-sm font-Jost font-medium text-[#222222]">SUBTOTAL:</h4>
+                              <h4 className="text-sm font-Jost font-medium text-[#222222]">$176.00</h4>
+                            </div>
+                            <Button 
+                              btnText={'View Cart'} 
+                              className={'uppercase text-sm font-Jost font-medium hover:text-[#222222] text-white bg-[#222222] hover:bg-[#E4E4E4] pt-[18px] pb-3 sm:pt-[22px] sm:pb-3.5'}
+                            />
+                            <Button 
+                              btnText={'Checkout'} 
+                              className={'uppercase text-sm font-Jost font-medium hover:text-[#222222] text-white bg-[#222222] hover:bg-[#E4E4E4] pt-[18px] pb-3 sm:pt-[22px] sm:pb-3.5'}
+                            />
+                          </div>
+                          
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
